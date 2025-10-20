@@ -10,15 +10,15 @@ import { Button } from '@/components/ui/button'
 
 <template>
   <header>
-    <div class="fixed top-0 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 py-2 px-20">
+    <div class="w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 py-2">
       <div class="container flex h-14 max-w-screen-2xl items-center">
         <div class="mr-4 hidden md:flex">
           <NuxtLink to="/" class="relative group px-4 py-2">
-            <span class="font-bold relative z-10 text-2xl">&lt;/Francesco Coniglione &gt;</span>
+            <span class="font-black relative z-10 text-2xl">&lt;/Francesco Coniglione &gt;</span>
             <span class="absolute inset-0 border border-primary/0 rounded-md group-hover:border-primary/100 transition-all duration-300"></span>
           </NuxtLink>
         </div>
-        <div class="flex flex-1 items-center justify-between space-x-2 md:justify-end">
+        <div class="flex flex-1 items-center justify-between space-x-2 md:justify-end font-medium">
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
@@ -58,3 +58,9 @@ import { Button } from '@/components/ui/button'
     </div>
   </header>
 </template>
+
+<style scoped>
+div {
+  font-family: Rubik, sans-serif;
+}
+</style>
