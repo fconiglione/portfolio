@@ -136,14 +136,18 @@ const projects = [
               </span>
             </div>
             <div class="flex gap-3 pt-4">
-              <Button class="cursor-pointer" variant="outline" size="sm" :href="project.github" target="_blank">
-                <Icon icon="mdi:github" class="mr-2 h-4 w-4" />
-                Code
-              </Button>
-              <Button class="cursor-pointer" v-if="project.demo" variant="outline" size="sm" :href="project.demo" target="_blank">
-                <Icon icon="mdi:open-in-new" class="mr-2 h-4 w-4" />
-                Demo
-              </Button>
+              <a :href="project.github" target="_blank" rel="noopener noreferrer">
+                <Button class="cursor-pointer" variant="outline" size="sm">
+                  <Icon icon="mdi:github" class="mr-2 h-4 w-4" />
+                  Code
+                </Button>
+              </a>
+              <a v-if="project.demo" :href="project.demo" target="_blank" rel="noopener noreferrer">
+                <Button class="cursor-pointer" variant="outline" size="sm">
+                  <Icon icon="mdi:open-in-new" class="mr-2 h-4 w-4" />
+                  Demo
+                </Button>
+              </a>
             </div>
           </div>
         </div>
