@@ -6,11 +6,11 @@ const currentYear = new Date().getFullYear()
 
 <template>
   <footer class="border-t border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 py-6">
-    <div class="container flex flex-col md:flex-row items-center justify-between max-w-screen-2xl">
-      <p class="text-sm text-muted-foreground">
+    <div class="container flex flex-col items-center space-y-4 px-4 md:space-y-0 md:flex-row md:justify-between max-w-screen-2xl">
+      <p class="text-sm text-muted-foreground text-center md:text-left">
         © {{ currentYear }} Francesco Coniglione. All rights reserved.
       </p>
-      <div class="flex items-center gap-4 mt-4 md:mt-0">
+      <div class="flex items-center gap-6">
         <a href="https://github.com/fconiglione" target="_blank" rel="noopener noreferrer" class="text-muted-foreground hover:text-primary transition-colors">
           <Icon icon="mdi:github" class="h-5 w-5" />
         </a>
