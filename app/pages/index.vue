@@ -33,7 +33,13 @@ const socials = [
         </p>
 
         <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-          <Button class="gap-2 cursor-pointer w-full sm:w-auto">
+          <Button 
+            class="gap-2 cursor-pointer w-full sm:w-auto" 
+            as="a"
+            href="/files/FrancescoConiglioneResume2025.pdf" 
+            target="_blank"
+            download
+          >
             <Icon icon="mdi:download" class="w-4 h-4" />
             Download CV
           </Button>
