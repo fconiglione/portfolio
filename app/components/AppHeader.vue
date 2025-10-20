@@ -21,18 +21,20 @@ const switchLang = (lang: string) => {
 
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value
+  // Prevent scroll when menu is open
+  document.body.style.overflow = isMenuOpen.value ? 'hidden' : ''
 }
 </script>
 
 <template>
   <header>
     <div class="w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 py-2">
-      <div class="container flex h-14 max-w-screen-2xl items-center justify-between px-4">
+      <div class="container flex h-14 max-w-screen-2xl items-center justify-between">
         <!-- Logo -->
         <div class="flex items-center">
-          <NuxtLink to="/" class="relative group px-4 py-2">
-            <span class="relative z-10 text-lg md:text-2xl font-[900]">&lt;/Francesco <span class="whitespace-nowrap">Coniglione &gt;</span></span>
-            <span class="absolute inset-0 border border-primary/0 rounded-md group-hover:border-primary/100 transition-all duration-300"></span>
+          <NuxtLink to="/" class="relative group">
+            <span class="relative z-10 text-lg sm:text-2xl font-[900]">&lt;/Francesco <span class="whitespace-nowrap">Coniglione &gt;</span></span>
+            <span></span>
           </NuxtLink>
         </div>
 
@@ -106,20 +108,6 @@ const toggleMenu = () => {
 
         <!-- Mobile Controls -->
         <div class="flex lg:hidden items-center gap-3">
-          <div class="flex items-center border rounded-md">
-            <Button 
-              variant="ghost" 
-              class="px-2 h-9 transition-colors rounded-none first:rounded-l-md last:rounded-r-md cursor-pointer text-sm"
-              :class="{ 'bg-primary/10 text-primary': currentLang === 'fr' }"
-              @click="switchLang('fr')"
-            >FR</Button>
-            <Button 
-              variant="ghost" 
-              class="px-2 h-9 transition-colors rounded-none first:rounded-l-md last:rounded-r-md cursor-pointer text-sm"
-              :class="{ 'bg-primary/10 text-primary': currentLang === 'en' }"
-              @click="switchLang('en')"
-            >EN</Button>
-          </div>
           <DropdownMenu>
             <DropdownMenuTrigger as-child>
               <Button variant="outline" class="cursor-pointer">
@@ -140,26 +128,63 @@ const toggleMenu = () => {
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
-          <Button variant="ghost" size="icon" @click="toggleMenu" class="cursor-pointer">
-            <Icon v-if="!isMenuOpen" icon="radix-icons:hamburger-menu" class="h-6 w-6" />
-            <Icon v-else icon="radix-icons:cross-1" class="h-6 w-6" />
+          <Button variant="ghost" size="icon" @click="toggleMenu" class="cursor-pointer relative">
+            <div class="w-6 h-6 flex flex-col justify-center items-center">
+              <span class="w-5 h-0.5 bg-current transition-all duration-300 ease-out"
+                :class="{ 'rotate-45 translate-y-1': isMenuOpen, '-translate-y-1': !isMenuOpen }">
+              </span>
+              <span class="w-5 h-0.5 bg-current my-0.5 transition-opacity duration-300"
+                :class="{ 'opacity-0': isMenuOpen }">
+              </span>
+              <span class="w-5 h-0.5 bg-current transition-all duration-300 ease-out"
+                :class="{ '-rotate-45 -translate-y-1': isMenuOpen, 'translate-y-1': !isMenuOpen }">
+              </span>
+            </div>
           </Button>
         </div>
       </div>
 
       <!-- Mobile Navigation -->
-      <div v-show="isMenuOpen" class="lg:hidden border-t border-border/40">
-        <nav class="flex flex-col space-y-4 p-4">
-          <NuxtLink v-for="item in ['home', 'projects', 'about', 'contact']" 
-            :key="item"
-            :to="`/${item === 'home' ? '' : item}`"
-            class="px-2 py-1 hover:text-primary transition-colors"
-            @click="isMenuOpen = false"
-          >
-            {{ item }}
-          </NuxtLink>
-        </nav>
-      </div>
+      <transition
+        enter-active-class="transition-all duration-300 ease-out"
+        enter-from-class="opacity-0 -translate-y-4"
+        enter-to-class="opacity-100 translate-y-0"
+        leave-active-class="transition-all duration-200 ease-in"
+        leave-from-class="opacity-100 translate-y-0"
+        leave-to-class="opacity-0 -translate-y-4"
+      >
+        <div v-show="isMenuOpen" class="lg:hidden border-t border-border/40">
+          <nav class="flex flex-col space-y-4 p-4">
+            <NuxtLink v-for="item in ['home', 'projects', 'about', 'contact']" 
+              :key="item"
+              :to="`/${item === 'home' ? '' : item}`"
+              class="px-2 py-1 hover:text-primary transition-colors"
+              @click="isMenuOpen = false"
+            >
+              {{ item }}
+            </NuxtLink>
+            
+            <!-- Language Selector in Mobile Menu -->
+            <div class="flex items-center gap-2 pt-4 mt-4 border-t border-border/40">
+              <span class="px-2 text-sm text-muted-foreground">Language:</span>
+              <div class="flex items-center border rounded-md">
+                <Button 
+                  variant="ghost" 
+                  class="px-3 h-9 transition-colors rounded-none first:rounded-l-md last:rounded-r-md cursor-pointer"
+                  :class="{ 'bg-primary/10 text-primary': currentLang === 'fr' }"
+                  @click="switchLang('fr')"
+                >FR</Button>
+                <Button 
+                  variant="ghost" 
+                  class="px-3 h-9 transition-colors rounded-none first:rounded-l-md last:rounded-r-md cursor-pointer"
+                  :class="{ 'bg-primary/10 text-primary': currentLang === 'en' }"
+                  @click="switchLang('en')"
+                >EN</Button>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </transition>
     </div>
   </header>
 </template>
