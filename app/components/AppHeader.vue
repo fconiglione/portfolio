@@ -44,22 +44,22 @@ const toggleMenu = () => {
             <NavigationMenuList class="gap-4 pr-2">
               <NavigationMenuItem>
                 <NavigationMenuLink href="/" class="py-2 hover:text-primary transition-colors text-normal">
-                  home
+                  Home
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <NavigationMenuLink href="/projects" class="py-2 hover:text-primary transition-colors text-normal">
-                  projects
+                  Projects
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <NavigationMenuLink href="/about" class="py-2 hover:text-primary transition-colors text-normal">
-                  about
+                  About
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <NavigationMenuLink href="/contact" class="py-2 hover:text-primary transition-colors text-normal">
-                  contact
+                  Contact
                 </NavigationMenuLink>
               </NavigationMenuItem>
             </NavigationMenuList>
