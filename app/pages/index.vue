@@ -11,27 +11,27 @@ const socials = [
 
 const projects = [
   {
-    title: 'Project Name',
-    description: 'Brief description of the project and its key features.',
-    image: '/images/project1.png',
-    tech: ['Vue', 'TypeScript', 'Node.js'],
-    github: 'https://github.com/fconiglione/project1',
-    demo: 'https://demo-url.com'
+    title: 'Finley',
+    description: 'Your friendly AI finance buddy that makes tracking your net worth simple and insightful.',
+    image: '/images/project-1.png',
+    tech: ['Next.js', 'Node.js', 'Python'],
+    github: 'https://github.com/fconiglione/Finley',
+    demo: 'https://dev-finley.vercel.app'
   },
   {
-    title: 'Project Name',
-    description: 'Brief description of the project and its key features.',
-    image: '/images/project2.png',
-    tech: ['React', 'Next.js', 'MongoDB'],
-    github: 'https://github.com/fconiglione/project2'
+    title: 'Ceasar CRM',
+    description: 'A comprehensive CRM system designed to enhance and streamline customer interactions.',
+    image: '/images/project-2.png',
+    tech: ['Angular', 'Node.js', 'PostgreSQL'],
+    github: 'https://github.com/fconiglione/ceasar',
+    demo: 'https://frim.io'
   },
   {
-    title: 'Project Name',
-    description: 'Brief description of the project and its key features.',
-    image: '/images/project3.png',
-    tech: ['Vue', 'Express', 'PostgreSQL'],
-    github: 'https://github.com/fconiglione/project3',
-    demo: 'https://demo-url.com'
+    title: 'FinRisk AI',
+    description: 'Machine learning model that predicts corporate bankruptcy risks with ~85% accuracy.',
+    image: '/images/project-3.png',
+    tech: ['Python', 'Pandas', 'scikit-learn'],
+    github: 'https://github.com/fconiglione/COMP4112-FinalProject'
   }
 ]
 </script>
@@ -104,14 +104,16 @@ const projects = [
     </div>
     <!-- Open Source Projects Section -->
     <div class="flex flex-col gap-8 py-8">
-      <h2 class="group inline-flex items-center gap-2 text-2xl sm:text-3xl font-semibold cursor-pointer">
-        <span class="text-primary/80">&gt;</span> 
-        Open Source Projects
-        <Icon 
-          icon="mdi:arrow-right" 
-          class="h-6 w-6 text-primary/80 transition-transform group-hover:translate-x-1" 
-        />
-      </h2>
+      <NuxtLink to="/projects" class="inline-block group">
+        <h2 class="inline-flex items-center gap-2 text-2xl sm:text-3xl font-semibold hover:text-primary/90 transition-colors">
+          <span class="text-primary/80">&gt;</span> 
+          Open Source Projects
+          <Icon 
+            icon="mdi:arrow-right" 
+            class="h-6 w-6 text-primary/80 transition-transform group-hover:translate-x-1" 
+          />
+        </h2>
+      </NuxtLink>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <div v-for="project in projects" :key="project.title" 
           class="group rounded-lg border bg-card text-card-foreground shadow-sm transition-all hover:shadow-md"
