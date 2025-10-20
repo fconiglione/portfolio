@@ -31,24 +31,24 @@ const switchLang = (lang: string) => {
         </div>
         <div class="flex flex-1 items-center justify-between space-x-2 md:justify-end font-medium ">
           <NavigationMenu>
-            <NavigationMenuList>
+            <NavigationMenuList class="gap-4 pr-2">
               <NavigationMenuItem>
-                <NavigationMenuLink href="/" class="py-2 hover:text-primary transition-colors text-md">
+                <NavigationMenuLink href="/" class="py-2 hover:text-primary transition-colors text-normal">
                   home
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuLink href="/projects" class="py-2 hover:text-primary transition-colors text-md">
+                <NavigationMenuLink href="/projects" class="py-2 hover:text-primary transition-colors text-normal">
                   projects
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuLink href="/about" class="py-2 hover:text-primary transition-colors text-md">
+                <NavigationMenuLink href="/about" class="py-2 hover:text-primary transition-colors text-normal">
                   about
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuLink href="/contact" class="py-2 hover:text-primary transition-colors text-md">
+                <NavigationMenuLink href="/contact" class="py-2 hover:text-primary transition-colors text-normal">
                   contact
                 </NavigationMenuLink>
               </NavigationMenuItem>
