@@ -33,22 +33,22 @@ const switchLang = (lang: string) => {
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <NavigationMenuLink href="/" class="px-4 py-2 hover:text-primary transition-colors text-md">
+                <NavigationMenuLink href="/" class="py-2 hover:text-primary transition-colors text-md">
                   home
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuLink href="/projects" class="px-4 py-2 hover:text-primary transition-colors text-md">
+                <NavigationMenuLink href="/projects" class="py-2 hover:text-primary transition-colors text-md">
                   projects
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuLink href="/about" class="px-4 py-2 hover:text-primary transition-colors text-md">
+                <NavigationMenuLink href="/about" class="py-2 hover:text-primary transition-colors text-md">
                   about
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuLink href="/contact" class="px-4 py-2 hover:text-primary transition-colors text-md">
+                <NavigationMenuLink href="/contact" class="py-2 hover:text-primary transition-colors text-md">
                   contact
                 </NavigationMenuLink>
               </NavigationMenuItem>
