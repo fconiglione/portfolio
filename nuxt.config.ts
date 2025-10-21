@@ -23,4 +23,9 @@ export default defineNuxtConfig({
     prefix: '',
     componentDir: './app/components/ui',
   },
+  runtimeConfig: {
+    public: {
+      googleAppsScriptUrl: process.env.GOOGLE_APPS_SCRIPT_URL
+    }
+  }
 })

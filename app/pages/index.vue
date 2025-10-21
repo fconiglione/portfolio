@@ -1,9 +1,8 @@
 <script setup lang="ts">
 import { Button } from '@/components/ui/button'
-import { Form } from '@/components/ui/form'
 import { Icon } from '@iconify/vue'
-import { useForm } from 'vee-validate'
 import * as z from 'zod'
+import { reactive, toRaw } from 'vue'
 
 const theme = useColorMode()
 
@@ -70,23 +69,35 @@ const skills = {
   tools: ['Azure', 'Google Cloud', 'Git/GitHub', 'Docker', 'JIRA']
 }
 
-const formSchema = z.object({
-  name: z.string().min(2, 'Name is required'),
-  email: z.string().email('Invalid email address'),
-  message: z.string().min(10, 'Message must be at least 10 characters'),
+const formData = reactive({
+  name: '',
+  email: '',
+  message: ''
 })
 
-const form = useForm({
-  validationSchema: formSchema,
-  initialValues: {
-    name: '',
-    email: '',
-    message: ''
-  }
+const onSubmit = async () => {
+  const { public: publicConfig } = useRuntimeConfig()
+  const scriptUrl = publicConfig.googleAppsScriptUrl
+  const url = new URL(scriptUrl)
+  url.searchParams.append('cacheBuster', Date.now().toString())
+
+  await fetch(url.toString(), {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    name: formData.name,
+    email: formData.email,
+    message: formData.message
+  }),
+  mode: 'no-cors'
 })
 
-const onSubmit = (values: typeof form.values) => {
-  console.log('Form submitted!', values)
+  console.log('Form Data:', toRaw(formData))
+
+  alert("Message sent! We'll be in touch soon.")
+  formData.name = formData.email = formData.message = ''
 }
 </script>
 
@@ -293,14 +304,14 @@ const onSubmit = (values: typeof form.values) => {
         </div>
 
         <!-- Contact Form -->
-         <div class="bg-card rounded-lg">
-          <Form @submit="form.handleSubmit(onSubmit)" :validation-schema="formSchema" class="space-y-6 border-none">
+        <div class="bg-card rounded-lg">
+          <form @submit.prevent="onSubmit" class="space-y-6 border-none">
             <div class="space-y-4">
               <div class="space-y-2">
                 <label for="name" class="text-sm font-medium">Name</label>
                 <input
                   id="name"
-                  v-model="form.values.name"
+                  v-model="formData.name"
                   type="text"
                   class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
                   required
@@ -311,7 +322,7 @@ const onSubmit = (values: typeof form.values) => {
                 <label for="email" class="text-sm font-medium">Email</label>
                 <input
                   id="email"
-                  v-model="form.values.email"
+                  v-model="formData.email"
                   type="email"
                   class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
                   required
@@ -322,7 +333,7 @@ const onSubmit = (values: typeof form.values) => {
                 <label for="message" class="text-sm font-medium">Message</label>
                 <textarea
                   id="message"
-                  v-model="form.values.message"
+                  v-model="formData.message"
                   rows="4"
                   class="flex w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
                   required
@@ -330,9 +341,9 @@ const onSubmit = (values: typeof form.values) => {
               </div>
             </div>
 
-            <Button type="submit" class="w-full">Send Message</Button>
-          </Form>
-         </div>
+            <Button type="submit" class="w-full cursor-pointer">Send Message</Button>
+          </form>
+        </div>
       </div>
     </div>
   </div>
