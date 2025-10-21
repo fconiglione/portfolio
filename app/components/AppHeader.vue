@@ -33,7 +33,7 @@ const toggleMenu = () => {
         <!-- Logo -->
         <div class="flex items-center">
           <NuxtLink to="/" class="relative group">
-            <span class="relative z-10 text-lg sm:text-2xl font-[900]">&lt;/Francesco <span class="whitespace-nowrap">Coniglione &gt;</span></span>
+            <span class="relative z-10 text-lg sm:text-2xl font-[900]">&lt;Francesco <span class="whitespace-nowrap">Coniglione /&gt;</span></span>
             <span></span>
           </NuxtLink>
         </div>

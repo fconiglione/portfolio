@@ -34,6 +34,13 @@ const projects = [
     github: 'https://github.com/fconiglione/COMP4112-FinalProject'
   }
 ]
+
+const skills = {
+  languages: ['TypeScript/JavaScript', 'Java', 'Python', 'C#'],
+  frontend: ['React', 'Angular', 'Vue.js', 'Next.js'],
+  backend: ['Node.js', 'Express.js', 'ASP.NET', 'PostgreSQL', 'MongoDB'],
+  tools: ['Azure', 'Google Cloud', 'Git/GitHub', 'Docker', 'JIRA']
+}
 </script>
 
 <template>
@@ -153,7 +160,46 @@ const projects = [
         </div>
       </div>
     </div>
-    <!-- About Section  -->
-     <!-- Contact Section -->
+    <!-- About Section -->
+    <div class="flex flex-col gap-8 py-8">
+      <NuxtLink to="https://www.linkedin.com/in/francescoconiglione/" target="_blank" class="inline-block group">
+        <h2 class="inline-flex items-center gap-2 text-2xl sm:text-3xl font-semibold hover:text-primary/90 transition-colors">
+          <span class="text-primary/80">&gt;</span> 
+          About Me
+          <Icon 
+            icon="mdi:arrow-right" 
+            class="h-6 w-6 text-primary/80 transition-transform group-hover:translate-x-1" 
+          />
+        </h2>
+      </NuxtLink>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Professional Summary -->
+        <div class="space-y-4">
+          <p class="text-lg text-muted-foreground">
+            Driven by a passion for innovation in technology, I am a software engineer with a unique perspective shaped by diverse experiences in healthcare, education, and finance. I specialize in building scalable applications with a focus on financial risk management and fintech innovation.
+          </p>
+          <p class="text-lg text-muted-foreground">
+            I am passionate about leveraging artificial intelligence and technology in finance, developing solutions that enhance security and efficiency in financial systems. As a lifelong learner, I actively seek opportunities to create a positive impact through technology.
+          </p>
+        </div>
+
+        <!-- Skills Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div v-for="(techs, category) in skills" :key="category" class="space-y-2">
+            <h3 class="text-sm font-medium text-primary capitalize">{{ category }}</h3>
+            <div class="flex flex-wrap gap-2">
+              <span v-for="tech in techs" :key="tech"
+                class="px-2 py-1 text-xs rounded-full bg-primary/10 text-primary"
+              >
+                {{ tech }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Section -->
   </div>
 </template>
