@@ -269,44 +269,46 @@ const onSubmit = (values: typeof form.values) => {
         </div>
 
         <!-- Contact Form -->
-        <Form @submit="form.handleSubmit(onSubmit)" :validation-schema="formSchema" class="space-y-6">
-          <div class="space-y-4">
-            <div class="space-y-2">
-              <label for="name" class="text-sm font-medium">Name</label>
-              <input
-                id="name"
-                v-model="form.values.name"
-                type="text"
-                class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
-                required
-              />
-            </div>
-            
-            <div class="space-y-2">
-              <label for="email" class="text-sm font-medium">Email</label>
-              <input
-                id="email"
-                v-model="form.values.email"
-                type="email"
-                class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
-                required
-              />
+         <div class="bg-card pt-6 pb-8 rounded-lg shadow-sm">
+          <Form @submit="form.handleSubmit(onSubmit)" :validation-schema="formSchema" class="space-y-6">
+            <div class="space-y-4">
+              <div class="space-y-2">
+                <label for="name" class="text-sm font-medium">Name</label>
+                <input
+                  id="name"
+                  v-model="form.values.name"
+                  type="text"
+                  class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
+                  required
+                />
+              </div>
+              
+              <div class="space-y-2">
+                <label for="email" class="text-sm font-medium">Email</label>
+                <input
+                  id="email"
+                  v-model="form.values.email"
+                  type="email"
+                  class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
+                  required
+                />
+              </div>
+
+              <div class="space-y-2">
+                <label for="message" class="text-sm font-medium">Message</label>
+                <textarea
+                  id="message"
+                  v-model="form.values.message"
+                  rows="4"
+                  class="flex w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
+                  required
+                ></textarea>
+              </div>
             </div>
 
-            <div class="space-y-2">
-              <label for="message" class="text-sm font-medium">Message</label>
-              <textarea
-                id="message"
-                v-model="form.values.message"
-                rows="4"
-                class="flex w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
-                required
-              ></textarea>
-            </div>
-          </div>
-
-          <Button type="submit" class="w-full">Send Message</Button>
-        </Form>
+            <Button type="submit" class="w-full">Send Message</Button>
+          </Form>
+         </div>
       </div>
     </div>
   </div>
