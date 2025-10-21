@@ -37,33 +37,31 @@ const projects = [
     github: 'https://github.com/fconiglione/COMP4112-FinalProject'
   },
   {
-    title: 'Test Project',
-    description: 'A web app to monitor and analyze your investment portfolio in real-time.',
+    title: 'MusoMania',
+    description: 'The social platform where musicians can connect, collaborate, and monetize their talents.',
     image: '/images/project-4.png',
-    tech: ['React', 'Express.js', 'MongoDB'],
-    github: 'https://github.com/fconiglione/test-project',
-    demo: 'https://test-project.vercel.app'
+    tech: ['Next.js', 'Prisma ORM'],
+    github: 'https://github.com/MusoManiaInc/MusoMania-Frontend',
+    demo: 'https://musomania-frontend.onrender.com/'
   },
   {
-    title: 'Test Project 2',
-    description: 'A real-time chat application with support for multiple rooms and private messaging.',
+    title: 'Merit SRMS',
+    description: 'An an intuitive student result management system that offers a full suite of CRUD features.',
     image: '/images/project-5.png',
-    tech: ['Vue.js', 'Socket.io', 'Node.js'],
-    github: 'https://github.com/fconiglione/test-project-2',
-    demo: 'https://test-project-2.vercel.app'
+    tech: ['React','Node.js', 'PostgreSQL'],
+    github: 'https://github.com/fconiglione/Merit'
   },
   {
-    title: 'Test Project 3',
-    description: 'A task management tool to help teams collaborate and stay organized.',
+    title: 'QuickBite',
+    description: 'The web-based local food delivery platform designed to connect customers with their favourite restaurants.',
     image: '/images/project-6.png',
-    tech: ['Angular', 'Firebase', 'TypeScript'],
-    github: 'https://github.com/fconiglione/test-project-3',
-    demo: 'https://test-project-3.vercel.app'
+    tech: ['ASP.NET (C#)', 'Node.js', 'PostgreSQL'],
+    github: 'https://github.com/JaskarnDhillon/QuickBiteCOMP3415'
   }
 ]
 
 const skills = {
-  languages: ['TypeScript/JavaScript', 'Java', 'Python', 'C#'],
+  languages: ['TypeScript/JavaScript', 'Java', 'Python', 'ASP.NET (C#)'],
   frontend: ['React', 'Angular', 'Vue.js', 'Next.js'],
   backend: ['Node.js', 'Express.js', 'ASP.NET', 'PostgreSQL', 'MongoDB'],
   tools: ['Azure', 'Google Cloud', 'Git/GitHub', 'Docker', 'JIRA']
@@ -324,14 +322,14 @@ const onSubmit = async () => {
               class="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
             >
               <Icon icon="mdi:github" class="h-5 w-5" />
-              GitHub
+              github/fconiglione
             </a>
             <a href="https://linkedin.com/in/francescoconiglione" 
               target="_blank"
               class="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
             >
               <Icon icon="mdi:linkedin" class="h-5 w-5" />
-              LinkedIn
+              linkedin/ln/francescoconiglione
             </a>
             <a href="mailto:fconiglione@protonmail.com" 
               class="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
