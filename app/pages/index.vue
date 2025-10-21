@@ -104,7 +104,7 @@ const projects = [
     </div>
     <!-- Open Source Projects Section -->
     <div id="projects" class="flex flex-col gap-8 py-8">
-      <NuxtLink to="/projects" class="inline-block group">
+      <NuxtLink to="https://github.com/fconiglione" target="_blank" class="inline-block group">
         <h2 class="inline-flex items-center gap-2 text-2xl sm:text-3xl font-semibold hover:text-primary/90 transition-colors">
           <span class="text-primary/80">&gt;</span> 
           Open Source Projects
