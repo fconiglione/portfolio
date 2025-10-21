@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { Button } from '@/components/ui/button'
+import { Form } from '@/components/ui/form'
 import { Icon } from '@iconify/vue'
+import { useForm } from 'vee-validate'
+import * as z from 'zod'
+
 const theme = useColorMode()
 
 const socials = [
@@ -40,6 +44,25 @@ const skills = {
   frontend: ['React', 'Angular', 'Vue.js', 'Next.js'],
   backend: ['Node.js', 'Express.js', 'ASP.NET', 'PostgreSQL', 'MongoDB'],
   tools: ['Azure', 'Google Cloud', 'Git/GitHub', 'Docker', 'JIRA']
+}
+
+const formSchema = z.object({
+  name: z.string().min(2, 'Name is required'),
+  email: z.string().email('Invalid email address'),
+  message: z.string().min(10, 'Message must be at least 10 characters'),
+})
+
+const form = useForm({
+  validationSchema: formSchema,
+  initialValues: {
+    name: '',
+    email: '',
+    message: ''
+  }
+})
+
+const onSubmit = (values: typeof form.values) => {
+  console.log('Form submitted!', values)
 }
 </script>
 
@@ -201,5 +224,90 @@ const skills = {
     </div>
 
     <!-- Contact Section -->
+    <div id="contact" class="flex flex-col gap-8 py-8">
+      <NuxtLink to="mailto:fconiglione@protonmail.com" class="inline-block group">
+        <h2 class="inline-flex items-center gap-2 text-2xl sm:text-3xl font-semibold hover:text-primary/90 transition-colors">
+          <span class="text-primary/80">&gt;</span> 
+          Get In Touch
+          <Icon 
+            icon="mdi:arrow-right" 
+            class="h-6 w-6 text-primary/80 transition-transform group-hover:translate-x-1" 
+          />
+        </h2>
+      </NuxtLink>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Contact Info -->
+        <div class="space-y-4">
+          <p class="text-lg text-muted-foreground">
+            I'm always interested in hearing about new projects and opportunities. 
+            Feel free to reach out if you'd like to connect or collaborate.
+          </p>
+          
+          <div class="flex flex-col gap-3 pt-4">
+            <a href="https://github.com/francescoconiglione" 
+              target="_blank"
+              class="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+            >
+              <Icon icon="mdi:github" class="h-5 w-5" />
+              GitHub
+            </a>
+            <a href="https://linkedin.com/in/francescoconiglione" 
+              target="_blank"
+              class="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+            >
+              <Icon icon="mdi:linkedin" class="h-5 w-5" />
+              LinkedIn
+            </a>
+            <a href="mailto:fconiglione@protonmail.com" 
+              class="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+            >
+              <Icon icon="mdi:email" class="h-5 w-5" />
+              fconiglione@protonmail.com
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <Form @submit="form.handleSubmit(onSubmit)" :validation-schema="formSchema" class="space-y-6">
+          <div class="space-y-4">
+            <div class="space-y-2">
+              <label for="name" class="text-sm font-medium">Name</label>
+              <input
+                id="name"
+                v-model="form.values.name"
+                type="text"
+                class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
+                required
+              />
+            </div>
+            
+            <div class="space-y-2">
+              <label for="email" class="text-sm font-medium">Email</label>
+              <input
+                id="email"
+                v-model="form.values.email"
+                type="email"
+                class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
+                required
+              />
+            </div>
+
+            <div class="space-y-2">
+              <label for="message" class="text-sm font-medium">Message</label>
+              <textarea
+                id="message"
+                v-model="form.values.message"
+                rows="4"
+                class="flex w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
+                required
+              ></textarea>
+            </div>
+          </div>
+
+          <Button type="submit" class="w-full">Send Message</Button>
+        </Form>
+      </div>
+    </div>
   </div>
 </template>
