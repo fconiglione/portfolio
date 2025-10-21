@@ -2,7 +2,7 @@
 import { Button } from '@/components/ui/button'
 import { Icon } from '@iconify/vue'
 import * as z from 'zod'
-import { reactive, toRaw } from 'vue'
+import { reactive, toRaw, ref } from 'vue'
 
 const theme = useColorMode()
 
@@ -75,29 +75,68 @@ const formData = reactive({
   message: ''
 })
 
-const onSubmit = async () => {
-  const { public: publicConfig } = useRuntimeConfig()
-  const scriptUrl = publicConfig.googleAppsScriptUrl
-  const url = new URL(scriptUrl)
-  url.searchParams.append('cacheBuster', Date.now().toString())
-
-  await fetch(url.toString(), {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json'
-  },
-  body: JSON.stringify({
-    name: formData.name,
-    email: formData.email,
-    message: formData.message
-  }),
-  mode: 'no-cors'
+const isSubmitting = ref(false)
+const submitStatus = reactive({
+  show: false,
+  isError: false,
+  message: ''
 })
 
-  console.log('Form Data:', toRaw(formData))
+const validateForm = () => {
+  const errors = []
+  if (!formData.name || formData.name.length < 2) {
+    errors.push('Name must be at least 2 characters')
+  }
+  if (!formData.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+    errors.push('Please enter a valid email address')
+  }
+  if (!formData.message || formData.message.length < 10) {
+    errors.push('Message must be at least 10 characters')
+  }
+  return errors
+}
 
-  alert("Message sent! We'll be in touch soon.")
-  formData.name = formData.email = formData.message = ''
+const onSubmit = async () => {
+  if (isSubmitting.value) return
+
+  const errors = validateForm()
+  if (errors.length > 0) {
+    submitStatus.isError = true
+    submitStatus.message = errors.join('; ')
+    submitStatus.show = true
+    return
+  }
+
+  isSubmitting.value = true
+  submitStatus.show = false
+
+  try {
+    const { public: publicConfig } = useRuntimeConfig()
+    const scriptUrl = publicConfig.googleAppsScriptUrl
+    const url = new URL(scriptUrl)
+    url.searchParams.append('cacheBuster', Date.now().toString())
+
+    await fetch(url.toString(), {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        message: formData.message
+      }),
+      mode: 'no-cors'
+    })
+
+    submitStatus.isError = false
+    submitStatus.message = "Thank you! I'll get back to you as soon as possible."
+    formData.name = formData.email = formData.message = ''
+  } catch (error) {
+    submitStatus.isError = true
+    submitStatus.message = 'Something went wrong. Please try again later.'
+  } finally {
+    isSubmitting.value = false
+    submitStatus.show = true
+  }
 }
 </script>
 
@@ -306,6 +345,15 @@ const onSubmit = async () => {
         <!-- Contact Form -->
         <div class="bg-card rounded-lg">
           <form @submit.prevent="onSubmit" class="space-y-6 border-none">
+            <div v-if="submitStatus.show" 
+              :class="[
+                'p-4 mb-4 rounded-md text-sm',
+                submitStatus.isError ? 'bg-destructive/10 text-destructive' : 'bg-primary/10 text-primary'
+              ]"
+            >
+              {{ submitStatus.message }}
+            </div>
+
             <div class="space-y-4">
               <div class="space-y-2">
                 <label for="name" class="text-sm font-medium">Name</label>
@@ -341,7 +389,13 @@ const onSubmit = async () => {
               </div>
             </div>
 
-            <Button type="submit" class="w-full cursor-pointer">Send Message</Button>
+            <Button 
+              type="submit" 
+              class="w-full cursor-pointer"
+              :disabled="isSubmitting"
+            >
+              {{ isSubmitting ? 'Sending...' : 'Send Message' }}
+            </Button>
           </form>
         </div>
       </div>
