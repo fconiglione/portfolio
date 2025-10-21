@@ -48,17 +48,17 @@ const toggleMenu = () => {
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuLink href="/projects" class="py-2 hover:text-primary transition-colors text-normal">
+                <NavigationMenuLink href="#projects" class="py-2 hover:text-primary transition-colors text-normal">
                   Projects
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuLink href="/about" class="py-2 hover:text-primary transition-colors text-normal">
+                <NavigationMenuLink href="#about" class="py-2 hover:text-primary transition-colors text-normal">
                   About
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuLink href="/contact" class="py-2 hover:text-primary transition-colors text-normal">
+                <NavigationMenuLink href="#contact" class="py-2 hover:text-primary transition-colors text-normal">
                   Contact
                 </NavigationMenuLink>
               </NavigationMenuItem>
@@ -157,7 +157,7 @@ const toggleMenu = () => {
           <nav class="flex flex-col space-y-4 p-4">
             <NuxtLink v-for="item in ['home', 'projects', 'about', 'contact']" 
               :key="item"
-              :to="`/${item === 'home' ? '' : item}`"
+              :to="`#${item === 'home' ? '' : item}`"
               class="px-2 py-1 hover:text-primary transition-colors"
               @click="isMenuOpen = false"
             >
