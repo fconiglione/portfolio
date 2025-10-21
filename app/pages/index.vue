@@ -39,17 +39,17 @@ const projects = [
   {
     title: 'MusoMania',
     description: 'The social platform where musicians can connect, collaborate, and monetize their talents.',
-    image: '/images/project-4.png',
+    image: '/images/project-4.jpg',
     tech: ['Next.js', 'Prisma ORM'],
     github: 'https://github.com/MusoManiaInc/MusoMania-Frontend',
     demo: 'https://musomania-frontend.onrender.com/'
   },
   {
-    title: 'Merit SRMS',
-    description: 'An an intuitive student result management system that offers a full suite of CRUD features.',
-    image: '/images/project-5.png',
-    tech: ['React','Node.js', 'PostgreSQL'],
-    github: 'https://github.com/fconiglione/Merit'
+    title: 'Spotify Music Finder',
+    description: 'Enables users to explore and discover music from Spotify\'s database of music tracks, albums, and artists.',
+    image: '/images/project-5.jpg',
+    tech: ['Java', 'JavaFX', 'GSON/JSON'],
+    github: 'https://github.com/fconiglione/SpotifyPlayer'
   },
   {
     title: 'QuickBite',
@@ -353,7 +353,7 @@ const onSubmit = async () => {
             </div>
 
             <div class="space-y-4">
-              <div class="space-y-2">
+              <div class="space-y-2 flex flex-col gap-0.5">
                 <label for="name" class="text-sm font-medium">Name</label>
                 <input
                   id="name"
@@ -364,7 +364,7 @@ const onSubmit = async () => {
                 />
               </div>
               
-              <div class="space-y-2">
+              <div class="space-y-2 flex flex-col gap-0.5">
                 <label for="email" class="text-sm font-medium">Email</label>
                 <input
                   id="email"
@@ -375,7 +375,7 @@ const onSubmit = async () => {
                 />
               </div>
 
-              <div class="space-y-2">
+              <div class="space-y-2 flex flex-col gap-0.5">
                 <label for="message" class="text-sm font-medium">Message</label>
                 <textarea
                   id="message"
