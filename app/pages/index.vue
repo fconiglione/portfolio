@@ -36,6 +36,30 @@ const projects = [
     image: '/images/project-3.png',
     tech: ['Python', 'Pandas', 'scikit-learn'],
     github: 'https://github.com/fconiglione/COMP4112-FinalProject'
+  },
+  {
+    title: 'Test Project',
+    description: 'A web app to monitor and analyze your investment portfolio in real-time.',
+    image: '/images/project-4.png',
+    tech: ['React', 'Express.js', 'MongoDB'],
+    github: 'https://github.com/fconiglione/test-project',
+    demo: 'https://test-project.vercel.app'
+  },
+  {
+    title: 'Test Project 2',
+    description: 'A real-time chat application with support for multiple rooms and private messaging.',
+    image: '/images/project-5.png',
+    tech: ['Vue.js', 'Socket.io', 'Node.js'],
+    github: 'https://github.com/fconiglione/test-project-2',
+    demo: 'https://test-project-2.vercel.app'
+  },
+  {
+    title: 'Test Project 3',
+    description: 'A task management tool to help teams collaborate and stay organized.',
+    image: '/images/project-6.png',
+    tech: ['Angular', 'Firebase', 'TypeScript'],
+    github: 'https://github.com/fconiglione/test-project-3',
+    demo: 'https://test-project-3.vercel.app'
   }
 ]
 
@@ -224,7 +248,7 @@ const onSubmit = (values: typeof form.values) => {
     </div>
 
     <!-- Contact Section -->
-    <div id="contact" class="flex flex-col gap-8 py-8">
+    <div id="contact" class="flex flex-col gap-8 pt-8 pb-14">
       <NuxtLink to="mailto:fconiglione@protonmail.com" class="inline-block group">
         <h2 class="inline-flex items-center gap-2 text-2xl sm:text-3xl font-semibold hover:text-primary/90 transition-colors">
           <span class="text-primary/80">&gt;</span> 
@@ -240,7 +264,7 @@ const onSubmit = (values: typeof form.values) => {
         <!-- Contact Info -->
         <div class="space-y-4">
           <p class="text-lg text-muted-foreground">
-            I'm always interested in hearing about new projects and opportunities. 
+            I'm always interested in hearing about new ideas and opportunities. 
             Feel free to reach out if you'd like to connect or collaborate.
           </p>
           
@@ -269,8 +293,8 @@ const onSubmit = (values: typeof form.values) => {
         </div>
 
         <!-- Contact Form -->
-         <div class="bg-card pt-6 pb-8 rounded-lg shadow-sm">
-          <Form @submit="form.handleSubmit(onSubmit)" :validation-schema="formSchema" class="space-y-6">
+         <div class="bg-card rounded-lg">
+          <Form @submit="form.handleSubmit(onSubmit)" :validation-schema="formSchema" class="space-y-6 border-none">
             <div class="space-y-4">
               <div class="space-y-2">
                 <label for="name" class="text-sm font-medium">Name</label>
