@@ -1,0 +1,14 @@
+{
+  "site": {
+    "title": "Francesco Coniglione",
+    "welcome": "Hi, I'm Francesco — a software engineer.",
+  "welcomePrefix": "Hi, I'm ",
+    "tagline": "A software engineer based in Ontario.",
+    "contact": "Contact"
+  },
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "about": "About"
+  }
+}

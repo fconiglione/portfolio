@@ -1,0 +1,14 @@
+{
+  "site": {
+    "title": "Francesco Coniglione",
+    "welcome": "Salut, je suis Francesco — ingénieur logiciel.",
+    "welcomePrefix": "Salut, je suis ",
+    "tagline": "Ingénieur logiciel basé en Ontario.",
+    "contact": "Contact"
+  },
+  "nav": {
+    "home": "Accueil",
+    "projects": "Projets",
+    "about": "À propos"
+  }
+}

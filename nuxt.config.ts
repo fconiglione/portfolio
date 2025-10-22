@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     '@nuxtjs/color-mode',
     '@nuxt/image',
+    '@nuxtjs/i18n'
   ],
   colorMode: {
     classSuffix: ''
@@ -27,5 +28,15 @@ export default defineNuxtConfig({
     public: {
       googleAppsScriptUrl: process.env.GOOGLE_APPS_SCRIPT_URL
     }
+  },
+  i18n: {
+    locales: [
+      { code: 'en', iso: 'en-CA', file: 'en.json', name: 'English' },
+      { code: 'fr', iso: 'fr-CA', file: 'fr.json', name: 'Français' }
+    ],
+    defaultLocale: 'en',
+    strategy: 'prefix_except_default',
+  langDir: './locales/',
+    detectBrowserLanguage: false
   }
 })

@@ -146,11 +146,11 @@ const onSubmit = async () => {
         <div class="space-y-3">
           <h1 class="text-3xl sm:text-4xl md:text-5xl">
             <div class="mb-2">
-              <span class="text-muted-foreground font-light">Hi, I'm </span>
+              <span class="text-muted-foreground font-light">{{ $t('site.welcomePrefix') }}</span>
               <span class="font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary/90 to-primary">Francesco Coniglione.</span>
             </div>
             <div class="text-lg sm:text-xl md:text-2xl font-normal text-muted-foreground">
-              A software engineer based in Ontario.
+              {{ $t('site.tagline', 'A software engineer based in Ontario.') }}
             </div>
           </h1>
         </div>
