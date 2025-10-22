@@ -2,13 +2,73 @@
   "site": {
     "title": "Francesco Coniglione",
     "welcome": "Hi, I'm Francesco — a software engineer.",
-  "welcomePrefix": "Hi, I'm ",
+    "welcomePrefix": "Hi, I'm ",
     "tagline": "A software engineer based in Ontario.",
-    "contact": "Contact"
+    "intro": "I build scalable fintech solutions focusing on innovative technologies and secure, efficient architectures."
+  },
+  "buttons": {
+    "Download CV": "Download CV",
+    "Download": "Download",
+    "Code": "Code",
+    "Demo": "Demo",
+    "Send Message": "Send Message"
+  },
+  "sections": {
+    "openSource": "Open Source Projects",
+    "about": "About Me",
+    "contact": "Get In Touch"
+  },
+  "socials": {
+    "GitHub": "GitHub",
+    "LinkedIn": "LinkedIn",
+    "Email": "Email"
+  },
+  "form": {
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "sending": "Sending...",
+    "validation": {
+      "name": "Name must be at least 2 characters",
+      "email": "Please enter a valid email address",
+      "message": "Message must be at least 10 characters"
+    },
+    "thankYou": "Thank you! I'll get back to you as soon as possible.",
+    "error": "Something went wrong. Please try again later."
+  },
+  "contact": {
+    "blurb": "I'm always interested in hearing about new ideas and opportunities. Feel free to reach out if you'd like to connect or collaborate."
+  },
+  "footer": {
+    "copy": "© {year} Francesco Coniglione. All rights reserved."
+  },
+  "about": {
+    "paragraph1": "Driven by a passion for innovation in technology, I am a software engineer with a unique perspective shaped by diverse experiences in healthcare, education, and finance. I specialize in building scalable applications with a focus on financial risk management and fintech innovation.",
+    "paragraph2": "I am passionate about leveraging artificial intelligence and technology in finance, developing solutions that enhance security and efficiency in financial systems. As a lifelong learner, I actively seek opportunities to create a positive impact through technology."
+  },
+  "projects": {
+    "finley": { "description": "Your friendly AI finance buddy that makes tracking your net worth simple and insightful." },
+    "ceasar": { "description": "A comprehensive CRM system designed to enhance and streamline customer interactions." },
+    "finrisk": { "description": "Machine learning model that predicts corporate bankruptcy risks with ~85% accuracy." },
+    "musomania": { "description": "The social platform where musicians can connect, collaborate, and monetize their talents." },
+    "spotify": { "description": "Enables users to explore and discover music from Spotify's database of music tracks, albums, and artists." },
+    "quickbite": { "description": "The web-based local food delivery platform designed to connect customers with their favourite restaurants." }
+  },
+  "skills": {
+    "languages": "Languages",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "tools": "Tools"
   },
   "nav": {
     "home": "Home",
     "projects": "Projects",
-    "about": "About"
+    "about": "About",
+    "contact": "Contact"
+  },
+  "colorMode": {
+    "light": "Light Mode",
+    "dark": "Dark Mode",
+    "system": "System Default"
   }
 }

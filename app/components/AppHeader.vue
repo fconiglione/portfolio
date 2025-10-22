@@ -12,11 +12,40 @@ import { Icon } from '@iconify/vue'
 
 const colorMode = useColorMode()
 
-const currentLang = ref('en')
+const { locale, setLocale } = useI18n()
 const isMenuOpen = ref(false)
 
-const switchLang = (lang: string) => {
-  currentLang.value = lang
+const currentLang = computed(() => locale.value)
+
+const switchLang = async (lang: 'en' | 'fr') => {
+  // prefer the i18n composable to change locale and let nuxt-i18n handle route prefixes
+  if (typeof setLocale === 'function') {
+    await setLocale(lang)
+  } else {
+    // fallback
+    locale.value = lang as 'en' | 'fr'
+  }
+}
+
+const anchors: { en: Record<string,string>; fr: Record<string,string> } = {
+  en: {
+    home: '/',
+    projects: 'projects',
+    about: 'about',
+    contact: 'contact'
+  },
+  fr: {
+    home: '/',
+    projects: 'projets',
+    about: 'a-propos',
+    contact: 'contact'
+  }
+}
+
+const getHref = (item: 'home' | 'projects' | 'about' | 'contact') => {
+  const lang = currentLang.value || 'en'
+  const anchor = (anchors[lang] && anchors[lang][item]) || anchors['en'][item]
+  return item === 'home' ? '/' : `#${anchor}`
 }
 
 const toggleMenu = () => {
@@ -43,23 +72,23 @@ const toggleMenu = () => {
           <NavigationMenu>
             <NavigationMenuList class="gap-4 pr-2">
               <NavigationMenuItem>
-                <NavigationMenuLink href="/" class="py-2 hover:text-primary transition-colors text-normal">
-                  Home
+                <NavigationMenuLink :href="getHref('home')" class="py-2 hover:text-primary transition-colors text-normal">
+                  {{ $t('nav.home') }}
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuLink href="#projects" class="py-2 hover:text-primary transition-colors text-normal">
-                  Projects
+                <NavigationMenuLink :href="getHref('projects')" class="py-2 hover:text-primary transition-colors text-normal">
+                  {{ $t('nav.projects') }}
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuLink href="#about" class="py-2 hover:text-primary transition-colors text-normal">
-                  About
+                <NavigationMenuLink :href="getHref('about')" class="py-2 hover:text-primary transition-colors text-normal">
+                  {{ $t('nav.about') }}
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuLink href="#contact" class="py-2 hover:text-primary transition-colors text-normal">
-                  Contact
+                <NavigationMenuLink :href="getHref('contact')" class="py-2 hover:text-primary transition-colors text-normal">
+                  {{ $t('nav.contact') }}
                 </NavigationMenuLink>
               </NavigationMenuItem>
             </NavigationMenuList>
@@ -92,13 +121,13 @@ const toggleMenu = () => {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
                   <DropdownMenuItem @click="colorMode.preference = 'light'" class="cursor-pointer">
-                    Light
+                    {{ $t('colorMode.light') }}
                   </DropdownMenuItem>
                   <DropdownMenuItem @click="colorMode.preference = 'dark'" class="cursor-pointer">
-                    Dark
+                    {{ $t('colorMode.dark') }}
                   </DropdownMenuItem>
                   <DropdownMenuItem @click="colorMode.preference = 'system'" class="cursor-pointer">
-                    System
+                    {{ $t('colorMode.system') }}
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
@@ -157,11 +186,11 @@ const toggleMenu = () => {
           <nav class="flex flex-col space-y-4 p-4">
             <NuxtLink v-for="item in ['home', 'projects', 'about', 'contact']" 
               :key="item"
-              :to="`#${item === 'home' ? '' : item}`"
+              :to="getHref(item as any)"
               class="px-2 py-1 hover:text-primary transition-colors"
               @click="isMenuOpen = false"
             >
-              {{ item }}
+              {{ $t(`nav.${item}`) }}
             </NuxtLink>
             
             <!-- Language Selector in Mobile Menu -->

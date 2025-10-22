@@ -8,7 +8,7 @@ const currentYear = new Date().getFullYear()
   <footer class="border-t border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 py-6">
     <div class="container flex flex-col items-center space-y-4 px-4 md:space-y-0 md:flex-row md:justify-between max-w-screen-2xl">
       <p class="text-sm text-muted-foreground text-center md:text-left">
-        © {{ currentYear }} Francesco Coniglione. All rights reserved.
+        {{ $t('footer.copy', { year: currentYear }) }}
       </p>
       <div class="flex items-center gap-6">
         <a href="https://github.com/fconiglione" target="_blank" rel="noopener noreferrer" class="text-muted-foreground hover:text-primary transition-colors">

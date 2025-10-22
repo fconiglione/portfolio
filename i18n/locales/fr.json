@@ -4,11 +4,71 @@
     "welcome": "Salut, je suis Francesco — ingénieur logiciel.",
     "welcomePrefix": "Salut, je suis ",
     "tagline": "Ingénieur logiciel basé en Ontario.",
-    "contact": "Contact"
+    "intro": "Je construis des solutions fintech évolutives en mettant l'accent sur les technologies innovantes et les architectures sécurisées et efficaces."
+  },
+  "buttons" : {
+    "Download CV": "Télécharger le CV",
+    "Download": "Télécharger",
+    "Code": "Code",
+    "Demo": "Démo",
+    "Send Message": "Envoyer le message"
+  },
+  "sections": {
+    "openSource": "Projets open source",
+    "about": "À propos",
+    "contact": "Contactez-moi"
+  },
+  "form": {
+    "name": "Nom",
+    "email": "Courriel",
+    "message": "Message",
+    "sending": "Envoi...",
+    "validation": {
+      "name": "Le nom doit contenir au moins 2 caractères",
+      "email": "Veuillez saisir une adresse e-mail valide",
+      "message": "Le message doit contenir au moins 10 caractères"
+    },
+    "thankYou": "Merci ! Je vous répondrai dès que possible.",
+    "error": "Une erreur est survenue. Veuillez réessayer plus tard."
+  },
+  "contact": {
+    "blurb": "Je suis toujours intéressé par de nouvelles idées et opportunités. N'hésitez pas à me contacter si vous souhaitez collaborer."
+  },
+  "footer": {
+    "copy": "© {year} Francesco Coniglione. Tous droits réservés."
+  },
+  "about": {
+    "paragraph1": "Animé par une passion pour l'innovation technologique, je suis un ingénieur logiciel avec une perspective unique forgée par des expériences diverses dans les secteurs de la santé, de l'éducation et de la finance. Je me spécialise dans la création d'applications évolutives axées sur la gestion des risques financiers et l'innovation fintech.",
+    "paragraph2": "Je suis passionné par l'exploitation de l'intelligence artificielle et des technologies dans la finance, en développant des solutions qui améliorent la sécurité et l'efficacité des systèmes financiers. En tant qu'apprenant permanent, je recherche activement des opportunités pour créer un impact positif grâce à la technologie."
+  },
+  "projects": {
+    "finley": { "description": "Votre assistant financier IA amical qui rend le suivi de votre valeur nette simple et perspicace." },
+    "ceasar": { "description": "Un système CRM complet conçu pour améliorer et rationaliser les interactions avec les clients." },
+    "finrisk": { "description": "Modèle d'apprentissage automatique qui prédit les risques de faillite des entreprises avec ~85% de précision." },
+    "musomania": { "description": "La plateforme sociale où les musiciens peuvent se connecter, collaborer et monétiser leurs talents." },
+    "spotify": { "description": "Permet aux utilisateurs d'explorer et de découvrir de la musique à partir de la base de données de Spotify." },
+    "quickbite": { "description": "La plateforme de livraison locale basée sur le web conçue pour connecter les clients à leurs restaurants préférés." }
+  },
+  "skills": {
+    "languages": "Langues",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "tools": "Outils"
+  },
+  "socials": {
+    "GitHub": "GitHub",
+    "LinkedIn": "LinkedIn",
+    "Email": "Courriel"
   },
   "nav": {
     "home": "Accueil",
     "projects": "Projets",
-    "about": "À propos"
+    "about": "À propos",
+    "contact": "Contact"
+  },
+  "colorMode": {
+    "light": "Mode clair",
+    "dark": "Mode sombre",
+    "system": "Par défaut du système"
   }
 }
