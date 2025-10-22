@@ -47,7 +47,7 @@
     "paragraph2": "I am passionate about leveraging artificial intelligence and technology in finance, developing solutions that enhance security and efficiency in financial systems. As a lifelong learner, I actively seek opportunities to create a positive impact through technology."
   },
   "projects": {
-    "finley": { "description": "YYour friendly AI finance buddy that makes tracking your net worth simple, insightful and fun." },
+    "finley": { "description": "Your friendly AI finance buddy that makes tracking your net worth simple, insightful and fun." },
     "ceasar": { "description": "A comprehensive CRM system designed to enhance and streamline customer interactions." },
     "finrisk": { "description": "Machine learning model that predicts corporate bankruptcy risks with ~85% accuracy." },
     "musomania": { "description": "The social platform where musicians can connect, collaborate, and monetize their talents." },
