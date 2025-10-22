@@ -74,7 +74,7 @@ const skills = {
   languages: ['TypeScript / JavaScript', 'Java / Kotlin', 'Python', 'ASP.NET (C#)', 'PHP'],
   frontend: ['React', 'Angular', 'Vue.js', 'Next.js'],
   backend: ['Node.js', 'Express.js', 'ASP.NET', 'MySQL', 'PostgreSQL', 'SQL Server', 'MongoDB', 'Firebase'],
-  tools: ['Azure', 'Google Cloud', 'Git / GitHub', 'Docker', 'JIRA']
+  tools: ['Azure', 'Google Cloud', 'Git / GitHub', 'Docker', 'Jira']
 }
 
 const formData = reactive({
