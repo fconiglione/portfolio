@@ -16,7 +16,7 @@ const projects = [
   {
     slug: 'finley',
     title: 'Finley',
-    description: 'Your friendly AI finance buddy that makes tracking your net worth simple and insightful.',
+    description: 'Your friendly AI finance buddy that makes tracking your net worth simple, insightful and fun.',
     image: '/images/project-1.png',
     tech: ['Next.js', 'Node.js', 'Python'],
     github: 'https://github.com/fconiglione/Finley',
