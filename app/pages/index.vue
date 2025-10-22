@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import { Button } from '@/components/ui/button'
 import { Icon } from '@iconify/vue'
-import * as z from 'zod'
-import { reactive, toRaw, ref } from 'vue'
+import { reactive, ref } from 'vue'
 
 const theme = useColorMode()
 
@@ -317,7 +316,7 @@ const onSubmit = async () => {
           </p>
           
           <div class="flex flex-col gap-3 pt-4">
-            <a href="https://github.com/francescoconiglione" 
+            <a href="https://github.com/fconiglione" 
               target="_blank"
               class="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
             >
