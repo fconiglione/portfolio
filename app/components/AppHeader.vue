@@ -195,7 +195,7 @@ const toggleMenu = () => {
             
             <!-- Language Selector in Mobile Menu -->
             <div class="flex items-center gap-2 pt-4 mt-4 border-t border-border/40">
-              <span class="px-2 text-sm text-muted-foreground">Language:</span>
+              <span class="px-2 text-sm text-muted-foreground">{{ $t('language') }}:</span>
               <div class="flex items-center border rounded-md">
                 <Button 
                   variant="ghost" 

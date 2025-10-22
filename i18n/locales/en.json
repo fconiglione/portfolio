@@ -70,5 +70,6 @@
     "light": "Light Mode",
     "dark": "Dark Mode",
     "system": "System Default"
-  }
+  },
+  "language": "Language"
 }
