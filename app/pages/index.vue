@@ -66,11 +66,15 @@ const projects = [
   }
 ]
 
+/*
+Python, Java / Kotlin, MySQL / PostgreSQL / SQL Server, React / Angular / Vue / Node.js / Express.js, ASP.NET (C#),
+WordPress (PHP), Microsoft Azure, MongoDB / Firebase, Git / GitHub
+*/
 const skills = {
-  languages: ['TypeScript/JavaScript', 'Java', 'Python', 'ASP.NET (C#)'],
+  languages: ['TypeScript / JavaScript', 'Java / Kotlin', 'Python', 'ASP.NET (C#)', 'PHP'],
   frontend: ['React', 'Angular', 'Vue.js', 'Next.js'],
-  backend: ['Node.js', 'Express.js', 'ASP.NET', 'PostgreSQL', 'MongoDB'],
-  tools: ['Azure', 'Google Cloud', 'Git/GitHub', 'Docker', 'JIRA']
+  backend: ['Node.js', 'Express.js', 'ASP.NET', 'MySQL', 'PostgreSQL', 'SQL Server', 'MongoDB', 'Firebase'],
+  tools: ['Azure', 'Google Cloud', 'Git / GitHub', 'Docker', 'JIRA']
 }
 
 const formData = reactive({
