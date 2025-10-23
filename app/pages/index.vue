@@ -185,10 +185,13 @@ const onSubmit = async () => {
           <div class="flex items-center gap-3 w-full sm:w-auto justify-center sm:justify-start">
             <Button v-for="social in socials" 
               :key="social.url"
+              as="a"
               variant="ghost" 
               size="icon"
               :href="social.url"
               target="_blank"
+              rel="noopener noreferrer"
+              :aria-label="$t(`socials.${social.label}`)"
               class="cursor-pointer h-10 w-10"
             >
               <Icon :icon="social.icon" class="h-5 w-5" />
