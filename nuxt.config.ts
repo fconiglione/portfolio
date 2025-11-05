@@ -23,8 +23,12 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     '@nuxtjs/color-mode',
     '@nuxt/image',
-    '@nuxtjs/i18n'
+    '@nuxtjs/i18n',
+    'nuxt-gtag'
   ],
+  gtag: {
+    id: 'G-2STPMGFEJF'
+  },
   colorMode: {
     classSuffix: ''
   },
