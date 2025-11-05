@@ -27,7 +27,8 @@ export default defineNuxtConfig({
     'nuxt-gtag'
   ],
   gtag: {
-    id: 'G-2STPMGFEJF'
+    id: 'G-2STPMGFEJF',
+    enabled: process.env.NODE_ENV === 'production'
   },
   colorMode: {
     classSuffix: ''
