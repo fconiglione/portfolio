@@ -203,7 +203,6 @@ const onSubmit = async () => {
 
       <!-- Image -->
       <div class="w-8/12 md:w-5/12 ml-0 mr-auto md:ml-auto md:mr-0">
-        <!-- Use CSS (Tailwind dark:variant) to show the correct portrait to avoid SSR/hydration timing issues -->
         <NuxtImg
           src="/images/portrait-light.svg"
           alt="Portrait Light"

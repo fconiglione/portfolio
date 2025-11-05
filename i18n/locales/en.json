@@ -4,7 +4,7 @@
     "welcome": "Hi, I'm Francesco — a software engineer.",
     "welcomePrefix": "Hi, I'm ",
     "tagline": "A software engineer based in Ontario.",
-    "intro": "I build scalable fintech solutions focusing on innovative technologies and secure, efficient architectures."
+    "intro": "I solve problems through the use of innovative technologies and secure, efficient architectures."
   },
   "buttons": {
     "Download CV": "Download CV",
@@ -43,8 +43,8 @@
     "copy": "© {year} Francesco Coniglione. All rights reserved."
   },
   "about": {
-    "paragraph1": "Driven by a passion for innovation in technology, I am a software engineer with a unique perspective shaped by diverse experiences in healthcare, education, and finance. I specialize in building scalable applications with a focus on financial risk management and fintech innovation.",
-    "paragraph2": "I am passionate about leveraging artificial intelligence and technology in finance, developing solutions that enhance security and efficiency in financial systems. As a lifelong learner, I actively seek opportunities to create a positive impact through technology."
+    "paragraph1": "Driven by a passion for innovation in technology, I am a software engineer with a unique perspective shaped by diverse experiences in healthcare, education, and finance. I specialize in building scalable applications with a focus on problem-solving.",
+    "paragraph2": "I am passionate about leveraging artificial intelligence and technology in various domains, developing solutions that enhance security and efficiency across industries. As a lifelong learner, I actively seek opportunities to create a positive impact through technology."
   },
   "projects": {
     "finley": { "description": "Your friendly AI finance buddy that makes tracking your net worth simple, insightful and fun." },

@@ -4,7 +4,7 @@
     "welcome": "Salut, je suis Francesco — ingénieur logiciel.",
     "welcomePrefix": "Salut, je suis ",
     "tagline": "Ingénieur logiciel basé en Ontario.",
-    "intro": "Je construis des solutions fintech évolutives en mettant l'accent sur les technologies innovantes et les architectures sécurisées et efficaces."
+    "intro": "Je résous des problèmes grâce à l'utilisation de technologies innovantes et d'architectures sécurisées et efficaces."
   },
   "buttons" : {
     "Download CV": "Télécharger le CV",
@@ -38,8 +38,8 @@
     "copy": "© {year} Francesco Coniglione. Tous droits réservés."
   },
   "about": {
-    "paragraph1": "Animé par une passion pour l'innovation technologique, je suis un ingénieur logiciel avec une perspective unique forgée par des expériences diverses dans les secteurs de la santé, de l'éducation et de la finance. Je me spécialise dans la création d'applications évolutives axées sur la gestion des risques financiers et l'innovation fintech.",
-    "paragraph2": "Je suis passionné par l'exploitation de l'intelligence artificielle et des technologies dans la finance, en développant des solutions qui améliorent la sécurité et l'efficacité des systèmes financiers. En tant qu'apprenant permanent, je recherche activement des opportunités pour créer un impact positif grâce à la technologie."
+    "paragraph1": "Animé par une passion pour l'innovation technologique, je suis un ingénieur logiciel avec une perspective unique forgée par des expériences diverses dans les secteurs de la santé, de l'éducation et de la finance. Je me spécialise dans la création d'applications évolutives axées sur la résolution de problèmes.",
+    "paragraph2": "Je suis passionné par l'exploitation de l'intelligence artificielle et des technologies dans divers domaines, en développant des solutions qui améliorent la sécurité et l'efficacité dans tous les secteurs. En tant qu'apprenant permanent, je recherche activement des opportunités pour créer un impact positif grâce à la technologie."
   },
   "projects": {
     "finley": { "description": "Votre assistant financier IA amical qui rend le suivi de votre valeur nette simple, perspicace et amusant." },
