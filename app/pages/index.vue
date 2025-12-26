@@ -67,14 +67,13 @@ const projects = [
 ]
 
 /*
-Python, Java / Kotlin, MySQL / PostgreSQL / SQL Server, React / Angular / Vue / Node.js / Express.js, ASP.NET (C#),
-WordPress (PHP), Microsoft Azure, MongoDB / Firebase, Git / GitHub
+Python, R, SQL (PostgreSQL, MySQL, SQL Server), Java, Scikit-learn, Hugging Face, Pandas, NumPy, Matplotlib, Flask, GCP, Azure, Git, Docker, Tableau, Power BI
 */
 const skills = {
-  languages: ['TypeScript / JavaScript', 'Java / Kotlin', 'Python', 'ASP.NET (C#)', 'PHP'],
-  frontend: ['React', 'Angular', 'Vue.js', 'Next.js'],
-  backend: ['Node.js', 'Express.js', 'ASP.NET', 'MySQL', 'PostgreSQL', 'SQL Server', 'MongoDB', 'Firebase'],
-  tools: ['Azure', 'Google Cloud', 'Git / GitHub', 'Docker', 'Jira']
+  languages: ['Python', 'SQL (Postgres/MySQL)', 'Java', 'R', 'TypeScript'],
+  dataScience: ['Scikit-learn', 'Pandas', 'NumPy', 'Matplotlib', 'Hugging Face'],
+  engineering: ['GCP', 'Azure', 'Docker', 'Flask', 'Git', 'REST APIs'],
+  tools: ['Tableau', 'Power BI', 'Jira', 'Excel']
 }
 
 const formData = reactive({
@@ -174,7 +173,7 @@ const onSubmit = async () => {
           <Button 
             class="gap-2 cursor-pointer w-full sm:w-auto" 
             as="a"
-            href="/files/FrancescoConiglioneResume2025.pdf" 
+            href="/files/FrancescoConiglioneResume2026.pdf" 
             target="_blank"
             download
           >

@@ -1,9 +1,9 @@
 {
   "site": {
     "title": "Francesco Coniglione",
-    "welcome": "Hi, I'm Francesco — a software engineer.",
+    "welcome": "Hi, I'm Francesco — I make data make sense.",
     "welcomePrefix": "Hi, I'm ",
-    "tagline": "A software engineer based in Ontario.",
+    "tagline": "A data scientist based in Ontario.",
     "intro": "I solve problems through the use of innovative technologies and secure, efficient architectures."
   },
   "buttons": {
@@ -37,27 +37,27 @@
     "error": "Something went wrong. Please try again later."
   },
   "contact": {
-    "blurb": "I'm always interested in hearing about new ideas and opportunities. Feel free to reach out if you'd like to connect or collaborate."
+    "blurb": "I'm always interested in discussing data, machine learning, or new opportunities. Feel free to reach out if you'd like to connect."
   },
   "footer": {
     "copy": "© {year} Francesco Coniglione. All rights reserved."
   },
   "about": {
-    "paragraph1": "Driven by a passion for innovation in technology, I am a software engineer with a unique perspective shaped by diverse experiences in healthcare, education, and finance. I specialize in building scalable applications with a focus on problem-solving.",
-    "paragraph2": "I am passionate about leveraging artificial intelligence and technology in various domains, developing solutions that enhance security and efficiency across industries. As a lifelong learner, I actively seek opportunities to create a positive impact through technology."
+    "paragraph1": "I am a Data Scientist and lifelong learner with a background that spans healthcare, education, and finance. Having worked as both a banker and a pharmacy assistant, I bring a unique perspective to data—I don't just see numbers, I see the people and business needs behind them.",
+    "paragraph2": "With a strong foundation in the software development process, I focus on bridging the gap between technical theory and practical application. I specialize in building clean, scalable code and developing machine learning models that solve genuine problems and drive growth."
   },
   "projects": {
-    "finley": { "description": "Your friendly AI finance buddy that makes tracking your net worth simple, insightful and fun." },
-    "ceasar": { "description": "A comprehensive CRM system designed to enhance and streamline customer interactions." },
-    "finrisk": { "description": "Machine learning model that predicts corporate bankruptcy risks with ~85% accuracy." },
-    "musomania": { "description": "The social platform where musicians can connect, collaborate, and monetize their talents." },
-    "spotify": { "description": "Enables users to explore and discover music from Spotify's database of music tracks, albums, and artists." },
-    "quickbite": { "description": "The web-based local food delivery platform designed to connect customers with their favourite restaurants." }
+    "finley": { "description": "Your finance buddy that leverages predictive analytics to provide personalized net worth insights." },
+    "ceasar": { "description": "A CRM system optimized for data-driven customer interactions and streamlined workflow management." },
+    "finrisk": { "description": "A predictive machine learning model designed to identify corporate bankruptcy risks with ~85% accuracy." },
+    "musomania": { "description": "A social platform for musicians, built with a scalable backend to support collaboration and monetization." },
+    "spotify": { "description": "A data-centric music exploration tool that utilizes the Spotify API to analyze and discover artist trends." },
+    "quickbite": { "description": "A food delivery platform focused on efficient order routing and seamless user-to-restaurant data flow." }
   },
   "skills": {
     "languages": "Languages",
-    "frontend": "Frontend",
-    "backend": "Backend",
+    "dataScience": "Data Science",
+    "engineering": "Engineering",
     "tools": "Tools"
   },
   "nav": {

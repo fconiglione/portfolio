@@ -1,64 +1,64 @@
 {
   "site": {
     "title": "Francesco Coniglione",
-    "welcome": "Salut, je suis Francesco — ingénieur logiciel.",
+    "welcome": "Salut, je suis Francesco — Je donne du sens aux données.",
     "welcomePrefix": "Salut, je suis ",
-    "tagline": "Ingénieur logiciel basé en Ontario.",
-    "intro": "Je résous des problèmes grâce à l'utilisation de technologies innovantes et d'architectures sécurisées et efficaces."
+    "tagline": "Scientifique de données basé en Ontario.",
+    "intro": "Je résous des problèmes grâce aux technologies innovantes et à des architectures sécurisées et efficaces."
   },
-  "buttons" : {
-    "Download CV": "Télécharger le CV",
+  "buttons": {
+    "Download CV": "Télécharger mon CV",
     "Download": "Télécharger",
     "Code": "Code",
     "Demo": "Démo",
-    "Send Message": "Envoyer le message"
+    "Send Message": "Envoyer"
   },
   "sections": {
-    "openSource": "Projets open source",
+    "openSource": "Projets Open Source",
     "about": "À propos",
     "contact": "Contactez-moi"
+  },
+  "socials": {
+    "GitHub": "GitHub",
+    "LinkedIn": "LinkedIn",
+    "Email": "Courriel"
   },
   "form": {
     "name": "Nom",
     "email": "Courriel",
     "message": "Message",
-    "sending": "Envoi...",
+    "sending": "Envoi en cours...",
     "validation": {
       "name": "Le nom doit contenir au moins 2 caractères",
-      "email": "Veuillez saisir une adresse e-mail valide",
+      "email": "Veuillez entrer une adresse courriel valide",
       "message": "Le message doit contenir au moins 10 caractères"
     },
     "thankYou": "Merci ! Je vous répondrai dès que possible.",
     "error": "Une erreur est survenue. Veuillez réessayer plus tard."
   },
   "contact": {
-    "blurb": "Je suis toujours intéressé par de nouvelles idées et opportunités. N'hésitez pas à me contacter si vous souhaitez collaborer."
+    "blurb": "Je suis toujours intéressé par la discussion sur les données, l'apprentissage automatique ou de nouvelles opportunités. N'hésitez pas à me contacter pour échanger."
   },
   "footer": {
     "copy": "© {year} Francesco Coniglione. Tous droits réservés."
   },
   "about": {
-    "paragraph1": "Animé par une passion pour l'innovation technologique, je suis un ingénieur logiciel avec une perspective unique forgée par des expériences diverses dans les secteurs de la santé, de l'éducation et de la finance. Je me spécialise dans la création d'applications évolutives axées sur la résolution de problèmes.",
-    "paragraph2": "Je suis passionné par l'exploitation de l'intelligence artificielle et des technologies dans divers domaines, en développant des solutions qui améliorent la sécurité et l'efficacité dans tous les secteurs. En tant qu'apprenant permanent, je recherche activement des opportunités pour créer un impact positif grâce à la technologie."
+    "paragraph1": "Je suis un scientifique de données et un apprenant à vie avec un parcours qui touche à la santé, à l'éducation et à la finance. Ayant travaillé comme banquier et assistant technique en pharmacie, j'apporte une perspective unique aux données : je ne vois pas seulement des chiffres, je vois les personnes et les besoins d'affaires derrière eux.",
+    "paragraph2": "Grâce à une base solide dans le processus de développement logiciel, je me concentre sur l'écart entre la théorie technique et l'application pratique. Je me spécialise dans la création de code propre et évolutif ainsi que dans le développement de modèles d'apprentissage automatique qui résolvent des problèmes concrets et stimulent la croissance."
   },
   "projects": {
-    "finley": { "description": "Votre assistant financier IA amical qui rend le suivi de votre valeur nette simple, perspicace et amusant." },
-    "ceasar": { "description": "Un système CRM complet conçu pour améliorer et rationaliser les interactions avec les clients." },
-    "finrisk": { "description": "Modèle d'apprentissage automatique qui prédit les risques de faillite des entreprises avec ~85% de précision." },
-    "musomania": { "description": "La plateforme sociale où les musiciens peuvent se connecter, collaborer et monétiser leurs talents." },
-    "spotify": { "description": "Permet aux utilisateurs d'explorer et de découvrir de la musique à partir de la base de données de Spotify." },
-    "quickbite": { "description": "La plateforme de livraison locale basée sur le web conçue pour connecter les clients à leurs restaurants préférés." }
+    "finley": { "description": "Votre allié financier qui utilise l'analyse prédictive pour offrir des aperçus personnalisés de votre valeur nette." },
+    "ceasar": { "description": "Un système CRM optimisé pour les interactions clients axées sur les données et une gestion simplifiée des flux de travail." },
+    "finrisk": { "description": "Un modèle d'apprentissage automatique prédictif conçu pour identifier les risques de faillite d'entreprise avec une précision d'environ 85 %." },
+    "musomania": { "description": "Une plateforme sociale pour musiciens, dotée d'un backend évolutif pour soutenir la collaboration et la monétisation." },
+    "spotify": { "description": "Un outil d'exploration musicale axé sur les données utilisant l'API Spotify pour analyser et découvrir les tendances des artistes." },
+    "quickbite": { "description": "Une plateforme de livraison de nourriture axée sur l'optimisation des itinéraires et un flux de données fluide entre clients et restaurants." }
   },
   "skills": {
-    "languages": "Langues",
-    "frontend": "Frontend",
-    "backend": "Backend",
+    "languages": "Langages",
+    "dataScience": "Science des données",
+    "engineering": "Ingénierie",
     "tools": "Outils"
-  },
-  "socials": {
-    "GitHub": "GitHub",
-    "LinkedIn": "LinkedIn",
-    "Email": "Courriel"
   },
   "nav": {
     "home": "Accueil",
@@ -69,7 +69,7 @@
   "colorMode": {
     "light": "Mode clair",
     "dark": "Mode sombre",
-    "system": "Par défaut du système"
+    "system": "Système"
   },
   "language": "Langue"
 }
