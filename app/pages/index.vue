@@ -18,7 +18,7 @@ const projects = [
     title: 'Debt Approval CLI',
     description: 'A command-line interface tool that provides debt approval estimates using a model trained on LendingClub data.',
     image: '/images/project-7.png',
-    tech: ['Python', 'Jupyter Notebook', 'Scikit-learn'],
+    tech: ['Python', 'Jupyter Notebook', 'scikit-learn'],
     github: 'https://github.com/fconiglione/debt-approval-cli'
   },
   {
@@ -71,7 +71,7 @@ Python, R, SQL (PostgreSQL, MySQL, SQL Server), Java, Scikit-learn, Hugging Face
 */
 const skills = {
   languages: ['Python', 'SQL (Postgres/MySQL)', 'Java', 'R', 'TypeScript'],
-  dataScience: ['Scikit-learn', 'Pandas', 'NumPy', 'Matplotlib', 'Hugging Face'],
+  dataScience: ['scikit-learn', 'Pandas', 'NumPy', 'Matplotlib', 'Hugging Face'],
   engineering: ['GCP', 'Azure', 'Docker', 'Flask', 'Git', 'REST APIs'],
   tools: ['Jupyter', 'Tableau', 'Power BI', 'Jira', 'Excel']
 }
