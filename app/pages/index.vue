@@ -14,6 +14,14 @@ const socials = [
 
 const projects = [
   {
+    slug: 'debt-approval-cli',
+    title: 'Debt Approval CLI',
+    description: 'A command-line interface tool that provides debt approval estimates using a model trained on LendingClub data.',
+    image: '/images/project-7.png',
+    tech: ['Python', 'Jupyter Notebook', 'scikit-learn'],
+    github: 'https://github.com/fconiglione/debt-approval-cli'
+  },
+  {
     slug: 'finley',
     title: 'Finley',
     description: 'Your friendly AI finance buddy that makes tracking your net worth simple, insightful and fun.',
@@ -55,14 +63,6 @@ const projects = [
     image: '/images/project-5.jpg',
     tech: ['Java', 'JavaFX', 'GSON/JSON'],
     github: 'https://github.com/fconiglione/SpotifyPlayer'
-  },
-  {
-    slug: 'quickbite',
-    title: 'QuickBite',
-    description: 'The web-based local food delivery platform designed to connect customers with their favourite restaurants.',
-    image: '/images/project-6.png',
-    tech: ['ASP.NET (C#)', 'Node.js', 'PostgreSQL'],
-    github: 'https://github.com/JaskarnDhillon/QuickBiteCOMP3415'
   }
 ]
 
@@ -73,7 +73,7 @@ const skills = {
   languages: ['Python', 'SQL (Postgres/MySQL)', 'Java', 'R', 'TypeScript'],
   dataScience: ['Scikit-learn', 'Pandas', 'NumPy', 'Matplotlib', 'Hugging Face'],
   engineering: ['GCP', 'Azure', 'Docker', 'Flask', 'Git', 'REST APIs'],
-  tools: ['Tableau', 'Power BI', 'Jira', 'Excel']
+  tools: ['Jupyter', 'Tableau', 'Power BI', 'Jira', 'Excel']
 }
 
 const formData = reactive({

@@ -47,12 +47,12 @@
     "paragraph2": "Grâce à une base solide dans le processus de développement logiciel, je me concentre sur l'écart entre la théorie technique et l'application pratique. Je me spécialise dans la création de code propre et évolutif ainsi que dans le développement de modèles d'apprentissage automatique qui résolvent des problèmes concrets et stimulent la croissance."
   },
   "projects": {
+    "debt-approval-cli": { "description": "Un outil en ligne de commande qui fournit des estimations d'approbation de dette à l'aide d'un modèle entraîné sur les données de LendingClub." },
     "finley": { "description": "Votre allié financier qui utilise l'analyse prédictive pour offrir des aperçus personnalisés de votre valeur nette." },
     "ceasar": { "description": "Un système CRM optimisé pour les interactions clients axées sur les données et une gestion simplifiée des flux de travail." },
     "finrisk": { "description": "Un modèle d'apprentissage automatique prédictif conçu pour identifier les risques de faillite d'entreprise avec une précision d'environ 85 %." },
     "musomania": { "description": "Une plateforme sociale pour musiciens, dotée d'un backend évolutif pour soutenir la collaboration et la monétisation." },
-    "spotify": { "description": "Un outil d'exploration musicale axé sur les données utilisant l'API Spotify pour analyser et découvrir les tendances des artistes." },
-    "quickbite": { "description": "Une plateforme de livraison de nourriture axée sur l'optimisation des itinéraires et un flux de données fluide entre clients et restaurants." }
+    "spotify": { "description": "Un outil d'exploration musicale axé sur les données utilisant l'API Spotify pour analyser et découvrir les tendances des artistes." }
   },
   "skills": {
     "languages": "Langages",
