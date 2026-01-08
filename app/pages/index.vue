@@ -18,7 +18,7 @@ const projects = [
     title: 'Debt Approval CLI',
     description: 'A command-line interface tool that provides debt approval estimates using a model trained on LendingClub data.',
     image: '/images/project-7.png',
-    tech: ['Python', 'Jupyter Notebook', 'scikit-learn'],
+    tech: ['Python', 'Jupyter', 'scikit-learn'],
     github: 'https://github.com/fconiglione/debt-approval-cli'
   },
   {
