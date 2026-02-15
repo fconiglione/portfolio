@@ -13,6 +13,14 @@ const socials = [
 ]
 
 const projects = [
+    {
+    slug: 'ai-web-agent',
+    title: 'AI Web Agent',
+    description: 'An AI agent powered by the Google Gemini API that fills out web forms for testing purposes through a working agentic loop.',
+    image: '/images/project-8.png',
+    tech: ['TypeScript', 'Node.js'],
+    github: 'https://github.com/fconiglione/magical-interview'
+  },
   {
     slug: 'debt-approval-cli',
     title: 'Debt Approval CLI',
@@ -55,14 +63,6 @@ const projects = [
     tech: ['Next.js', 'Prisma ORM'],
     github: 'https://github.com/MusoManiaInc/MusoMania-Frontend',
     demo: 'https://musomania-frontend.onrender.com/'
-  },
-  {
-    slug: 'spotify',
-    title: 'Spotify Music Finder',
-    description: 'Enables users to explore and discover music from Spotify\'s database of music tracks, albums, and artists.',
-    image: '/images/project-5.jpg',
-    tech: ['Java', 'JavaFX', 'GSON/JSON'],
-    github: 'https://github.com/fconiglione/SpotifyPlayer'
   }
 ]
 

@@ -47,12 +47,12 @@
     "paragraph2": "With a strong foundation in the software development process, I focus on bridging the gap between technical theory and practical application. I specialize in building clean, scalable code and developing machine learning models that solve genuine problems and drive growth."
   },
   "projects": {
+    "ai-web-agent": { "description": "An AI agent powered by the Google Gemini API that fills out web forms for testing purposes through a working agentic loop." },
     "debt-approval-cli": { "description": "A command-line interface tool that provides debt approval estimates using a model trained on LendingClub data." },
     "finley": { "description": "Your finance buddy that leverages predictive analytics to provide personalized net worth insights." },
     "ceasar": { "description": "A CRM system optimized for data-driven customer interactions and streamlined workflow management." },
     "finrisk": { "description": "A predictive machine learning model designed to identify corporate bankruptcy risks with ~85% accuracy." },
-    "musomania": { "description": "A social platform for musicians, built with a scalable backend to support collaboration and monetization." },
-    "spotify": { "description": "A data-centric music exploration tool that utilizes the Spotify API to analyze and discover artist trends." }
+    "musomania": { "description": "A social platform for musicians, built with a scalable backend to support collaboration and monetization." }
   },
   "skills": {
     "languages": "Languages",
