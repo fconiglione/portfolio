@@ -19,7 +19,7 @@ const projects = [
     description: 'An AI agent powered by the Google Gemini API that fills out web forms for testing purposes through a working agentic loop.',
     image: '/images/project-8.png',
     tech: ['TypeScript', 'Node.js'],
-    github: 'https://github.com/fconiglione/magical-interview'
+    github: 'https://github.com/fconiglione/ai-web-agent'
   },
   {
     slug: 'debt-approval-cli',
