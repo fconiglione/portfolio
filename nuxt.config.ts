@@ -6,10 +6,10 @@ export default defineNuxtConfig({
     head: {
       title: 'Francesco Coniglione',
       meta: [
-        { name: 'description', content: 'Welcome to my portfolio! I am Francesco Coniglione, a passionate data scientist dedicated to transforming data into actionable insights. Explore my projects, skills, and get in touch to collaborate on innovative solutions.' },
+        { name: 'description', content: 'Author website of Francesco Coniglione, focused on anti-money laundering, financial crime analysis, and practical compliance writing.' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'author', content: 'Francesco Coniglione' },
-        { name: 'keywords', content: 'Francesco Coniglione, Data Scientist, Portfolio, Machine Learning, Data Analysis, AI, Projects, Skills' },
+        { name: 'keywords', content: 'Francesco Coniglione, AML, anti-money laundering, financial crime, sanctions, compliance, investigations, author' },
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },

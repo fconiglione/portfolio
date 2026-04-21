@@ -1,413 +1,89 @@
 <script setup lang="ts">
 import { Button } from '@/components/ui/button'
 import { Icon } from '@iconify/vue'
-import { reactive, ref } from 'vue'
-const { t } = useI18n()
 
-const theme = useColorMode()
+const expertise = ['investigations', 'risk', 'regulation', 'humanBehaviour'] as const
+const topics = ['tradeBased', 'crypto', 'suspiciousActivity'] as const
 
 const socials = [
-  { icon: 'mdi:github', url: 'https://github.com/fconiglione', label: 'GitHub' },
-  { icon: 'mdi:linkedin', url: 'https://linkedin.com/in/francescoconiglione', label: 'LinkedIn' },
-  { icon: 'mdi:email', url: 'mailto:fconiglione@protonmail.com', label: 'Email' }
+  { icon: 'mdi:linkedin', url: 'https://linkedin.com/in/francescoconiglione', labelKey: 'linkedin' },
+  { icon: 'mdi:email', url: 'mailto:inquiries@francescoconiglione.com', labelKey: 'email' }
 ]
-
-const projects = [
-    {
-    slug: 'ai-web-agent',
-    title: 'AI Web Agent',
-    description: 'An AI agent powered by the Google Gemini API that fills out web forms for testing purposes through a working agentic loop.',
-    image: '/images/project-8.png',
-    tech: ['TypeScript', 'Node.js'],
-    github: 'https://github.com/fconiglione/ai-web-agent'
-  },
-  {
-    slug: 'debt-approval-cli',
-    title: 'Debt Approval CLI',
-    description: 'A command-line interface tool that provides debt approval estimates using a model trained on LendingClub data.',
-    image: '/images/project-7.png',
-    tech: ['Python', 'Jupyter', 'scikit-learn'],
-    github: 'https://github.com/fconiglione/debt-approval-cli'
-  },
-  {
-    slug: 'finley',
-    title: 'Finley',
-    description: 'Your friendly AI finance buddy that makes tracking your net worth simple, insightful and fun.',
-    image: '/images/project-1.png',
-    tech: ['Next.js', 'Node.js', 'Python'],
-    github: 'https://github.com/fconiglione/Finley',
-    demo: 'https://dev-finley.vercel.app'
-  },
-  {
-    slug: 'ceasar',
-    title: 'Ceasar CRM',
-    description: 'A comprehensive CRM system designed to enhance and streamline customer interactions.',
-    image: '/images/project-2.png',
-    tech: ['Angular', 'Node.js', 'PostgreSQL'],
-    github: 'https://github.com/fconiglione/ceasar',
-    demo: 'https://frim.io'
-  },
-  {
-    slug: 'finrisk',
-    title: 'FinRisk AI',
-    description: 'Machine learning model that predicts corporate bankruptcy risks with ~85% accuracy.',
-    image: '/images/project-3.png',
-    tech: ['Python', 'Pandas', 'scikit-learn'],
-    github: 'https://github.com/fconiglione/COMP4112-FinalProject'
-  },
-  {
-    slug: 'musomania',
-    title: 'MusoMania',
-    description: 'The social platform where musicians can connect, collaborate, and monetize their talents.',
-    image: '/images/project-4.jpg',
-    tech: ['Next.js', 'Prisma ORM'],
-    github: 'https://github.com/MusoManiaInc/MusoMania-Frontend',
-    demo: 'https://musomania-frontend.onrender.com/'
-  }
-]
-
-/*
-Python, R, SQL (PostgreSQL, MySQL, SQL Server), Java, Scikit-learn, Hugging Face, Pandas, NumPy, Matplotlib, Flask, GCP, Azure, Git, Docker, Tableau, Power BI
-*/
-const skills = {
-  languages: ['Python', 'SQL (Postgres/MySQL)', 'Java', 'R', 'TypeScript'],
-  dataScience: ['scikit-learn', 'Pandas', 'NumPy', 'Matplotlib', 'Hugging Face'],
-  engineering: ['GCP', 'Azure', 'Docker', 'Flask', 'Git', 'REST APIs'],
-  tools: ['Jupyter', 'Tableau', 'Power BI', 'Jira', 'Excel']
-}
-
-const formData = reactive({
-  name: '',
-  email: '',
-  message: ''
-})
-
-const isSubmitting = ref(false)
-const submitStatus = reactive({
-  show: false,
-  isError: false,
-  message: ''
-})
-
-const validateForm = () => {
-  const errors = []
-  if (!formData.name || formData.name.length < 2) {
-    errors.push(t('form.validation.name'))
-  }
-  if (!formData.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-    errors.push(t('form.validation.email'))
-  }
-  if (!formData.message || formData.message.length < 10) {
-    errors.push(t('form.validation.message'))
-  }
-  return errors
-}
-
-const onSubmit = async () => {
-  if (isSubmitting.value) return
-
-  const errors = validateForm()
-  if (errors.length > 0) {
-    submitStatus.isError = true
-    submitStatus.message = errors.join('; ')
-    submitStatus.show = true
-    return
-  }
-
-  isSubmitting.value = true
-  submitStatus.show = false
-
-  try {
-    const { public: publicConfig } = useRuntimeConfig()
-    const scriptUrl = publicConfig.googleAppsScriptUrl
-    const url = new URL(scriptUrl)
-    url.searchParams.append('cacheBuster', Date.now().toString())
-
-    await fetch(url.toString(), {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        name: formData.name,
-        email: formData.email,
-        message: formData.message
-      }),
-      mode: 'no-cors'
-    })
-
-    submitStatus.isError = false
-  submitStatus.message = t('form.thankYou', "Thank you! I'll get back to you as soon as possible.")
-    formData.name = formData.email = formData.message = ''
-  } catch (error) {
-    submitStatus.isError = true
-  submitStatus.message = t('form.error', 'Something went wrong. Please try again later.')
-  } finally {
-    isSubmitting.value = false
-    submitStatus.show = true
-  }
-}
 </script>
 
 <template>
-  <div class="flex flex-col gap-8 md:gap-12">
-    <!-- Hero Section -->
-    <div class="flex flex-col-reverse md:flex-row items-center justify-between gap-8 py-10">
-      <!-- Content -->
-      <div class="flex flex-col gap-6 w-full md:w-1/2">
-        <div class="space-y-3">
-          <h1 class="text-3xl sm:text-4xl md:text-5xl">
-            <div class="mb-2">
-              <span class="text-muted-foreground font-light">{{ $t('site.welcomePrefix') }}</span>
-              <span class="font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary/90 to-primary">Francesco Coniglione.</span>
-            </div>
-            <div class="text-lg sm:text-xl md:text-2xl font-normal text-muted-foreground">
-              {{ $t('site.tagline') }}
-            </div>
-          </h1>
-        </div>
-        
-        <p class="text-base sm:text-lg text-muted-foreground max-w-lg">
-          {{ $t('site.intro') }}
+  <div>
+    <section class="grid items-start gap-10 py-10 lg:grid-cols-[1.25fr_0.75fr] md:py-14">
+      <div class="space-y-6">
+        <p class="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground sm:text-sm">{{ $t('landing.kicker') }}</p>
+        <h1 class="max-w-3xl text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
+          {{ $t('landing.heroTitle') }}
+        </h1>
+        <p class="max-w-2xl text-lg leading-relaxed text-muted-foreground">
+          {{ $t('landing.heroBody') }}
         </p>
 
-        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-          <Button 
-            class="gap-2 cursor-pointer w-full sm:w-auto" 
-            as="a"
-            href="/files/FrancescoConiglioneResume2026.pdf" 
-            target="_blank"
-            download
-          >
-            <Icon icon="mdi:download" class="w-4 h-4" />
-            {{ $t('buttons.Download CV') }}
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
+          <Button as="a" href="#contact" class="h-11 px-6 text-base font-semibold cursor-pointer">
+            {{ $t('landing.ctaPrimary') }}
           </Button>
-
-          <div class="flex items-center gap-3 w-full sm:w-auto justify-center sm:justify-start">
-            <Button v-for="social in socials" 
-              :key="social.url"
-              as="a"
-              variant="ghost" 
-              size="icon"
-              :href="social.url"
-              target="_blank"
-              rel="noopener noreferrer"
-              :aria-label="$t(`socials.${social.label}`)"
-              class="cursor-pointer h-10 w-10"
-            >
-              <Icon :icon="social.icon" class="h-5 w-5" />
-              <span class="sr-only">{{ $t(`socials.${social.label}`) }}</span>
-            </Button>
-          </div>
+          <Button as="a" href="#writing" variant="outline" class="h-11 px-6 text-base font-semibold cursor-pointer">
+            {{ $t('landing.ctaSecondary') }}
+          </Button>
         </div>
       </div>
 
-      <!-- Image -->
-      <div class="w-8/12 md:w-5/12 ml-0 mr-auto md:ml-auto md:mr-0">
-        <NuxtImg
-          src="/images/portrait-light.svg"
-          alt="Portrait Light"
-          class="w-full block dark:hidden"
-        />
-        <NuxtImg
-          src="/images/portrait-dark.svg"
-          alt="Portrait Dark"
-          class="w-full hidden dark:block"
-        />
-      </div>
-    </div>
-    <!-- Open Source Projects Section -->
-    <div id="projects" class="flex flex-col gap-8 py-8">
-      <NuxtLink to="https://github.com/fconiglione" target="_blank" class="inline-block group">
-        <h2 class="inline-flex items-center gap-2 text-2xl sm:text-3xl font-semibold hover:text-primary/90 transition-colors" id="projets">
-          <span class="text-primary/80">&gt;</span> 
-          {{ $t('sections.openSource') }}
-          <Icon 
-            icon="mdi:arrow-right" 
-            class="h-6 w-6 text-primary/80 transition-transform group-hover:translate-x-1" 
-          />
-        </h2>
-      </NuxtLink>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div v-for="project in projects" :key="project.title" 
-          class="group rounded-lg border bg-card text-card-foreground shadow-sm transition-all hover:shadow-md"
-        >
-          <div class="relative aspect-video overflow-hidden rounded-t-lg">
-            <NuxtImg
-              :src="project.image"
-              :alt="project.title"
-              class="object-cover w-full h-full transition-transform group-hover:scale-105"
-            />
-          </div>
-          <div class="p-6 space-y-4">
-            <h3 class="text-xl font-semibold">{{ project.title }}</h3>
-            <p class="text-sm text-muted-foreground">{{ $t(`projects.${project.slug}.description`, project.description) }}</p>
-            <div class="flex flex-wrap gap-2">
-              <span v-for="tech in project.tech" :key="tech"
-                class="px-2 py-1 text-xs rounded-full bg-primary/10 text-primary"
-              >
-                {{ tech }}
-              </span>
-            </div>
-            <div class="flex gap-3 pt-4">
-              <a :href="project.github" target="_blank" rel="noopener noreferrer">
-                <Button class="cursor-pointer" variant="outline" size="sm">
-                  <Icon icon="mdi:github" class="mr-2 h-4 w-4" />
-                  {{ $t('buttons.Code') }}
-                </Button>
-              </a>
-              <a v-if="project.demo" :href="project.demo" target="_blank" rel="noopener noreferrer">
-                <Button class="cursor-pointer" variant="outline" size="sm">
-                  <Icon icon="mdi:open-in-new" class="mr-2 h-4 w-4" />
-                  {{ $t('buttons.Demo') }}
-                </Button>
-              </a>
-            </div>
-          </div>
+      <aside class="rounded-2xl border border-border bg-card p-6">
+        <p class="text-sm font-semibold uppercase tracking-[0.14em] text-muted-foreground">{{ $t('landing.sidebarTitle') }}</p>
+        <ul class="mt-5 space-y-4">
+          <li v-for="item in expertise" :key="item" class="rounded-xl border border-border bg-background p-4">
+            <p class="text-sm font-semibold uppercase tracking-wide">{{ $t(`landing.expertise.${item}.label`) }}</p>
+            <p class="mt-1 text-sm text-muted-foreground">{{ $t(`landing.expertise.${item}.desc`) }}</p>
+          </li>
+        </ul>
+      </aside>
+    </section>
+
+    <section id="writing" class="py-8 md:py-10">
+      <div class="rounded-3xl border border-border bg-card p-6 sm:p-8 md:p-10">
+        <div class="mb-3 inline-flex items-center rounded-full border px-3 py-1 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+          <Icon icon="mdi:clock-outline" class="mr-1.5 h-3.5 w-3.5" />
+          {{ $t('landing.comingSoonLabel') }}
+        </div>
+        <h2 class="text-3xl font-bold leading-tight">{{ $t('landing.writingTitle') }}</h2>
+        <p class="mt-3 max-w-3xl text-base text-muted-foreground sm:text-lg">{{ $t('landing.writingBody') }}</p>
+        <p class="mt-2 max-w-3xl text-sm text-muted-foreground">{{ $t('landing.comingSoonBody') }}</p>
+
+        <div class="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <article v-for="topic in topics" :key="topic" class="flex h-full flex-col rounded-2xl border border-border bg-background p-5 transition-colors hover:bg-muted/40">
+            <p class="text-xs font-semibold uppercase tracking-[0.12em] text-muted-foreground">{{ $t(`landing.topics.${topic}.tag`) }}</p>
+            <h3 class="mt-3 text-base font-semibold leading-snug">{{ $t(`landing.topics.${topic}.title`) }}</h3>
+            <p class="mt-3 text-sm leading-relaxed text-muted-foreground">{{ $t(`landing.topics.${topic}.desc`) }}</p>
+          </article>
         </div>
       </div>
-    </div>
-    <!-- About Section -->
-    <div class="flex flex-col gap-8 py-8" id="about">
-      <NuxtLink to="https://www.linkedin.com/in/francescoconiglione/" target="_blank" class="inline-block group" id="a-propos">
-        <h2 class="inline-flex items-center gap-2 text-2xl sm:text-3xl font-semibold hover:text-primary/90 transition-colors">
-          <span class="text-primary/80">&gt;</span> 
-          {{ $t('sections.about') }}
-          <Icon 
-            icon="mdi:arrow-right" 
-            class="h-6 w-6 text-primary/80 transition-transform group-hover:translate-x-1" 
-          />
-        </h2>
-      </NuxtLink>
+    </section>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <!-- Professional Summary -->
-        <div class="space-y-4">
-          <p class="text-lg text-muted-foreground">
-            {{ $t('about.paragraph1') }}
-          </p>
-          <p class="text-lg text-muted-foreground">
-            {{ $t('about.paragraph2') }}
-          </p>
-        </div>
+    <section id="about" class="py-8 md:py-10">
+      <div class="rounded-3xl border border-border bg-card p-8 md:p-10">
+        <h2 class="text-3xl font-bold leading-tight">{{ $t('landing.aboutTitle') }}</h2>
+        <p class="mt-4 max-w-4xl text-base leading-relaxed text-muted-foreground sm:text-lg">{{ $t('landing.aboutBody1') }}</p>
+        <p class="mt-4 max-w-4xl text-base leading-relaxed text-muted-foreground sm:text-lg">{{ $t('landing.aboutBody2') }}</p>
+      </div>
+    </section>
 
-        <!-- Skills Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <div v-for="(techs, category) in skills" :key="category" class="space-y-2">
-            <h3 class="text-sm font-medium text-primary capitalize">{{ $t(`skills.${category}`) }}</h3>
-            <div class="flex flex-wrap gap-2">
-              <span v-for="tech in techs" :key="tech"
-                class="px-2 py-1 text-xs rounded-full bg-primary/10 text-primary"
-              >
-                {{ tech }}
-              </span>
-            </div>
-          </div>
+    <section id="contact" class="py-8 pb-16 md:py-10 md:pb-20">
+      <div class="rounded-3xl border border-border bg-card p-8 md:p-10">
+        <h2 class="text-3xl font-bold leading-tight">{{ $t('landing.contactTitle') }}</h2>
+        <p class="mt-3 max-w-3xl text-base text-muted-foreground sm:text-lg">{{ $t('landing.contactBody') }}</p>
+
+        <div class="mt-7 flex flex-wrap gap-3">
+          <a v-for="social in socials" :key="social.url" :href="social.url" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg border border-border/80 px-4 py-2 text-sm text-muted-foreground transition-colors hover:text-primary">
+            <Icon :icon="social.icon" class="h-4 w-4" />
+            <span>{{ $t(`landing.socialLabels.${social.labelKey}`) }}</span>
+          </a>
         </div>
       </div>
-    </div>
-
-    <!-- Contact Section -->
-    <div id="contact" class="flex flex-col gap-8 pt-8 pb-14">
-      <!-- French anchor -->
-      <a id="contact" class="hidden" />
-      <NuxtLink to="mailto:fconiglione@protonmail.com" class="inline-block group">
-        <h2 class="inline-flex items-center gap-2 text-2xl sm:text-3xl font-semibold hover:text-primary/90 transition-colors">
-          <span class="text-primary/80">&gt;</span> 
-          {{ $t('sections.contact') }}
-          <Icon 
-            icon="mdi:arrow-right" 
-            class="h-6 w-6 text-primary/80 transition-transform group-hover:translate-x-1" 
-          />
-        </h2>
-      </NuxtLink>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <!-- Contact Info -->
-        <div class="space-y-4">
-            <p class="text-lg text-muted-foreground">
-            {{ $t('contact.blurb') }}
-          </p>
-          
-          <div class="flex flex-col gap-3 pt-4">
-            <a href="https://github.com/fconiglione" 
-              target="_blank"
-              class="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
-            >
-              <Icon icon="mdi:github" class="h-5 w-5" />
-              github/fconiglione
-            </a>
-            <a href="https://linkedin.com/in/francescoconiglione" 
-              target="_blank"
-              class="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
-            >
-              <Icon icon="mdi:linkedin" class="h-5 w-5" />
-              linkedin/ln/francescoconiglione
-            </a>
-            <a href="mailto:fconiglione@protonmail.com" 
-              class="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
-            >
-              <Icon icon="mdi:email" class="h-5 w-5" />
-              fconiglione@protonmail.com
-            </a>
-          </div>
-        </div>
-
-        <!-- Contact Form -->
-        <div class="bg-card rounded-lg">
-          <form @submit.prevent="onSubmit" class="space-y-6 border-none">
-            <div v-if="submitStatus.show" 
-              :class="[
-                'p-4 mb-4 rounded-md text-sm',
-                submitStatus.isError ? 'bg-destructive/10 text-destructive' : 'bg-primary/10 text-primary'
-              ]"
-            >
-              {{ submitStatus.message }}
-            </div>
-
-            <div class="space-y-4">
-              <div class="space-y-2 flex flex-col gap-0.5">
-                <label for="name" class="text-sm font-medium">{{ $t('form.name') }}</label>
-                <input
-                  id="name"
-                  v-model="formData.name"
-                  type="text"
-                  class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
-                  required
-                />
-              </div>
-              
-              <div class="space-y-2 flex flex-col gap-0.5">
-                <label for="email" class="text-sm font-medium">{{ $t('form.email') }}</label>
-                <input
-                  id="email"
-                  v-model="formData.email"
-                  type="email"
-                  class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
-                  required
-                />
-              </div>
-
-              <div class="space-y-2 flex flex-col gap-0.5">
-                <label for="message" class="text-sm font-medium">{{ $t('form.message') }}</label>
-                <textarea
-                  id="message"
-                  v-model="formData.message"
-                  rows="4"
-                  class="flex w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
-                  required
-                ></textarea>
-              </div>
-            </div>
-
-            <Button 
-              type="submit" 
-              class="w-full cursor-pointer"
-              :disabled="isSubmitting"
-            >
-              {{ isSubmitting ? $t('form.sending') : $t('buttons.Send Message') }}
-            </Button>
-          </form>
-        </div>
-      </div>
-    </div>
+    </section>
   </div>
 </template>

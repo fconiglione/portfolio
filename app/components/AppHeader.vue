@@ -30,14 +30,14 @@ const switchLang = async (lang: 'en' | 'fr') => {
 const anchors: { en: Record<string,string>; fr: Record<string,string> } = {
   en: {
     home: '/',
-    projects: 'projects',
+    projects: 'writing',
     about: 'about',
     contact: 'contact'
   },
   fr: {
     home: '/',
-    projects: 'projets',
-    about: 'a-propos',
+    projects: 'writing',
+    about: 'about',
     contact: 'contact'
   }
 }
@@ -46,6 +46,11 @@ const getHref = (item: 'home' | 'projects' | 'about' | 'contact') => {
   const lang = currentLang.value || 'en'
   const anchor = (anchors[lang] && anchors[lang][item]) || anchors['en'][item]
   return item === 'home' ? '/' : `#${anchor}`
+}
+
+const closeMenu = () => {
+  isMenuOpen.value = false
+  document.body.style.overflow = ''
 }
 
 const toggleMenu = () => {
@@ -57,37 +62,37 @@ const toggleMenu = () => {
 
 <template>
   <header>
-    <div class="w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 py-2">
-      <div class="container flex h-14 max-w-screen-2xl items-center justify-between">
+    <div class="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div class="flex h-16 items-center justify-between">
         <!-- Logo -->
         <div class="flex items-center">
           <NuxtLink to="/" class="relative group">
-            <span class="relative z-10 text-lg sm:text-2xl font-[900]">&lt;Francesco <span class="whitespace-nowrap">Coniglione /&gt;</span></span>
+            <span class="relative z-10 text-lg font-bold tracking-tight sm:text-2xl">Francesco <span class="whitespace-nowrap">Coniglione</span></span>
             <span></span>
           </NuxtLink>
         </div>
 
         <!-- Desktop Navigation -->
-        <div class="hidden lg:flex items-center justify-end font-medium gap-4">
+        <div class="hidden lg:flex items-center justify-end font-medium gap-3">
           <NavigationMenu>
             <NavigationMenuList class="gap-4 pr-2">
               <NavigationMenuItem>
-                <NavigationMenuLink :href="getHref('home')" class="py-2 hover:text-primary transition-colors text-normal">
+                <NavigationMenuLink :href="getHref('home')" class="rounded-md px-2 py-2 hover:bg-muted transition-colors text-sm">
                   {{ $t('nav.home') }}
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuLink :href="getHref('projects')" class="py-2 hover:text-primary transition-colors text-normal">
+                <NavigationMenuLink :href="getHref('projects')" class="rounded-md px-2 py-2 hover:bg-muted transition-colors text-sm">
                   {{ $t('nav.projects') }}
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuLink :href="getHref('about')" class="py-2 hover:text-primary transition-colors text-normal">
+                <NavigationMenuLink :href="getHref('about')" class="rounded-md px-2 py-2 hover:bg-muted transition-colors text-sm">
                   {{ $t('nav.about') }}
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuLink :href="getHref('contact')" class="py-2 hover:text-primary transition-colors text-normal">
+                <NavigationMenuLink :href="getHref('contact')" class="rounded-md px-2 py-2 hover:bg-muted transition-colors text-sm">
                   {{ $t('nav.contact') }}
                 </NavigationMenuLink>
               </NavigationMenuItem>
@@ -147,13 +152,13 @@ const toggleMenu = () => {
             </DropdownMenuTrigger>
             <DropdownMenuContent>
               <DropdownMenuItem @click="colorMode.preference = 'light'" class="cursor-pointer">
-                Light
+                {{ $t('colorMode.light') }}
               </DropdownMenuItem>
               <DropdownMenuItem @click="colorMode.preference = 'dark'" class="cursor-pointer">
-                Dark
+                {{ $t('colorMode.dark') }}
               </DropdownMenuItem>
               <DropdownMenuItem @click="colorMode.preference = 'system'" class="cursor-pointer">
-                System
+                {{ $t('colorMode.system') }}
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
@@ -187,8 +192,8 @@ const toggleMenu = () => {
             <NuxtLink v-for="item in ['home', 'projects', 'about', 'contact']" 
               :key="item"
               :to="getHref(item as any)"
-              class="px-2 py-1 hover:text-primary transition-colors"
-              @click="isMenuOpen = false"
+              class="rounded-md px-2 py-2 hover:bg-muted transition-colors"
+              @click="closeMenu"
             >
               {{ $t(`nav.${item}`) }}
             </NuxtLink>
@@ -217,9 +222,3 @@ const toggleMenu = () => {
     </div>
   </header>
 </template>
-
-<style scoped>
-div {
-  font-family: Rubik, sans-serif;
-}
-</style>

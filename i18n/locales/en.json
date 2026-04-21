@@ -1,68 +1,66 @@
 {
-  "site": {
-    "title": "Francesco Coniglione",
-    "welcome": "Hi, I'm Francesco — I make data make sense.",
-    "welcomePrefix": "Hi, I'm ",
-    "tagline": "A data scientist based in Ontario.",
-    "intro": "I solve problems through the use of innovative technologies and secure, efficient architectures."
-  },
-  "buttons": {
-    "Download CV": "Download CV",
-    "Download": "Download",
-    "Code": "Code",
-    "Demo": "Demo",
-    "Send Message": "Send Message"
-  },
-  "sections": {
-    "openSource": "Open Source Projects",
-    "about": "About Me",
-    "contact": "Get In Touch"
-  },
-  "socials": {
-    "GitHub": "GitHub",
-    "LinkedIn": "LinkedIn",
-    "Email": "Email"
-  },
-  "form": {
-    "name": "Name",
-    "email": "Email",
-    "message": "Message",
-    "sending": "Sending...",
-    "validation": {
-      "name": "Name must be at least 2 characters",
-      "email": "Please enter a valid email address",
-      "message": "Message must be at least 10 characters"
+  "landing": {
+    "kicker": "Author and Technologist",
+    "heroTitle": "Writing at the intersection of AML, financial crime, and policy execution.",
+    "heroBody": "I write practical, research-backed analysis on anti-money laundering, transaction monitoring, sanctions risk, and financial crime typologies for professionals who need clarity over noise.",
+    "ctaPrimary": "Get in touch",
+    "ctaSecondary": "View writing focus",
+    "sidebarTitle": "Core Areas",
+    "writingTitle": "Current Writing Focus",
+    "writingBody": "My work translates complex regulation and operational pain points into concise, usable guidance for compliance teams, investigators, and risk leaders.",
+    "comingSoonLabel": "Book Coming Soon",
+    "comingSoonBody": "I am currently developing my first AML/financial crime book. This section previews the themes and frameworks it will cover.",
+    "aboutTitle": "About Francesco",
+    "aboutBody1": "I am an author and technologist based in Barrie, Ontario. Specializing in financial crime, I use my background in computer science and graduate studies in technology management to understand the vulnerabilities in both digital architectures and human behaviour.",
+    "aboutBody2": "Across my work, I explore how institutions can reduce false positives, improve investigative quality, and build compliance programs that are both defensible and efficient.",
+    "contactTitle": "Let's collaborate",
+    "contactBody": "If you're building training, thought leadership, or publication content in AML and financial crime, I am open to collaborations, guest writing, and speaking opportunities.",
+    "socialLabels": {
+      "linkedin": "LinkedIn",
+      "email": "Email"
     },
-    "thankYou": "Thank you! I'll get back to you as soon as possible.",
-    "error": "Something went wrong. Please try again later."
-  },
-  "contact": {
-    "blurb": "I'm always interested in discussing data, machine learning, or new opportunities. Feel free to reach out if you'd like to connect."
+    "expertise": {
+      "investigations": {
+        "label": "Investigations",
+        "desc": "Case development, narrative quality, and evidence-based reporting standards."
+      },
+      "risk": {
+        "label": "Risk and Controls",
+        "desc": "Transaction monitoring, sanctions controls, and model governance through a practitioner lens."
+      },
+      "regulation": {
+        "label": "Regulatory Signals",
+        "desc": "Distilling guidance, enforcement actions, and emerging expectations into actionable insight."
+      },
+      "humanBehaviour": {
+        "label": "Human Behaviour",
+        "desc": "Examining behavioural patterns, decision-making bias, and social engineering dynamics linked to financial crime." 
+      }
+    },
+    "topics": {
+      "tradeBased": {
+        "tag": "Feature",
+        "title": "Trade-Based Money Laundering",
+        "desc": "Patterns, red flags, and data constraints that matter when moving from theory to real detection workflows."
+      },
+      "crypto": {
+        "tag": "Briefing",
+        "title": "Crypto and Hybrid Illicit Flows",
+        "desc": "How digital assets intersect with legacy laundering channels and what that means for controls."
+      },
+      "suspiciousActivity": {
+        "tag": "Guide",
+        "title": "Suspicious Activity Reporting",
+        "desc": "Practical frameworks for writing clearer reports that improve law-enforcement utility."
+      }
+    }
   },
   "footer": {
     "copy": "© {year} Francesco Coniglione. All rights reserved."
   },
-  "about": {
-    "paragraph1": "I am a Data Scientist and lifelong learner with a background that spans healthcare, education, and finance. Having worked as both a banker and a pharmacy assistant, I bring a unique perspective to data—I don't just see numbers, I see the people and business needs behind them.",
-    "paragraph2": "With a strong foundation in the software development process, I focus on bridging the gap between technical theory and practical application. I specialize in building clean, scalable code and developing machine learning models that solve genuine problems and drive growth."
-  },
-  "projects": {
-    "ai-web-agent": { "description": "An AI agent powered by the Google Gemini API that fills out web forms for testing purposes through a working agentic loop." },
-    "debt-approval-cli": { "description": "A command-line interface tool that provides debt approval estimates using a model trained on LendingClub data." },
-    "finley": { "description": "Your finance buddy that leverages predictive analytics to provide personalized net worth insights." },
-    "ceasar": { "description": "A CRM system optimized for data-driven customer interactions and streamlined workflow management." },
-    "finrisk": { "description": "A predictive machine learning model designed to identify corporate bankruptcy risks with ~85% accuracy." },
-    "musomania": { "description": "A social platform for musicians, built with a scalable backend to support collaboration and monetization." }
-  },
-  "skills": {
-    "languages": "Languages",
-    "dataScience": "Data Science",
-    "engineering": "Engineering",
-    "tools": "Tools"
-  },
   "nav": {
     "home": "Home",
-    "projects": "Projects",
+    "projects": "Writing",
     "about": "About",
     "contact": "Contact"
   },

@@ -1,68 +1,66 @@
 {
-  "site": {
-    "title": "Francesco Coniglione",
-    "welcome": "Salut, je suis Francesco — Je donne du sens aux données.",
-    "welcomePrefix": "Salut, je suis ",
-    "tagline": "Scientifique de données basé en Ontario.",
-    "intro": "Je résous des problèmes grâce aux technologies innovantes et à des architectures sécurisées et efficaces."
-  },
-  "buttons": {
-    "Download CV": "Télécharger mon CV",
-    "Download": "Télécharger",
-    "Code": "Code",
-    "Demo": "Démo",
-    "Send Message": "Envoyer"
-  },
-  "sections": {
-    "openSource": "Projets Open Source",
-    "about": "À propos",
-    "contact": "Contactez-moi"
-  },
-  "socials": {
-    "GitHub": "GitHub",
-    "LinkedIn": "LinkedIn",
-    "Email": "Courriel"
-  },
-  "form": {
-    "name": "Nom",
-    "email": "Courriel",
-    "message": "Message",
-    "sending": "Envoi en cours...",
-    "validation": {
-      "name": "Le nom doit contenir au moins 2 caractères",
-      "email": "Veuillez entrer une adresse courriel valide",
-      "message": "Le message doit contenir au moins 10 caractères"
+  "landing": {
+    "kicker": "Auteur et Technologue",
+    "heroTitle": "Écriture au croisement de la LBA, de la criminalité financière et de l'exécution réglementaire.",
+    "heroBody": "J'écris des analyses pratiques et documentées sur la lutte contre le blanchiment, la surveillance des transactions, le risque de sanctions et les typologies de criminalité financière.",
+    "ctaPrimary": "Me contacter",
+    "ctaSecondary": "Voir les axes d'écriture",
+    "sidebarTitle": "Domaines clés",
+    "writingTitle": "Axes d'écriture actuels",
+    "writingBody": "Mon travail transforme des exigences réglementaires complexes en orientations concrètes pour les équipes conformité, enquêtes et gestion du risque.",
+    "comingSoonLabel": "Livre à paraître",
+    "comingSoonBody": "Je travaille actuellement sur mon premier livre en LBA/criminalité financière. Cette section présente les thèmes et cadres qu'il abordera.",
+    "aboutTitle": "À propos de Francesco",
+    "aboutBody1": "Je suis un auteur et technologue basé à Barrie, Ontario. Spécialisé en criminalité financière, j'utilise mon expérience en informatique et mes études en gestion de la technologie pour comprendre les vulnérabilités des architectures numériques et du comportement humain.",
+    "aboutBody2": "J'explore comment réduire les faux positifs, améliorer la qualité des enquêtes et bâtir des dispositifs de conformité robustes et efficaces.",
+    "contactTitle": "Collaborons",
+    "contactBody": "Si vous développez du contenu éditorial, de formation ou de leadership d'opinion en LBA et criminalité financière, je suis ouvert aux collaborations, contributions invitées et conférences.",
+    "socialLabels": {
+      "linkedin": "LinkedIn",
+      "email": "Courriel"
     },
-    "thankYou": "Merci ! Je vous répondrai dès que possible.",
-    "error": "Une erreur est survenue. Veuillez réessayer plus tard."
-  },
-  "contact": {
-    "blurb": "Je suis toujours intéressé par la discussion sur les données, l'apprentissage automatique ou de nouvelles opportunités. N'hésitez pas à me contacter pour échanger."
+    "expertise": {
+      "investigations": {
+        "label": "Enquêtes",
+        "desc": "Construction des dossiers, qualité narrative et standards de reporting fondés sur les preuves."
+      },
+      "risk": {
+        "label": "Risque et contrôles",
+        "desc": "Surveillance transactionnelle, contrôles de sanctions et gouvernance des modèles vus par un praticien."
+      },
+      "regulation": {
+        "label": "Signaux réglementaires",
+        "desc": "Traduire lignes directrices et actions d'application en pistes concrètes."
+      },
+      "humanBehaviour": {
+        "label": "Comportement humain",
+        "desc": "Analyser les comportements, les biais décisionnels et les dynamiques d'ingénierie sociale liées à la criminalité financière."
+      }
+    },
+    "topics": {
+      "tradeBased": {
+        "tag": "Dossier",
+        "title": "Blanchiment fondé sur le commerce",
+        "desc": "Schémas, signaux d'alerte et limites de données essentiels pour une détection opérationnelle."
+      },
+      "crypto": {
+        "tag": "Brief",
+        "title": "Crypto et flux illicites hybrides",
+        "desc": "Comment les actifs numériques se combinent aux canaux traditionnels et ce que cela implique pour les contrôles."
+      },
+      "suspiciousActivity": {
+        "tag": "Guide",
+        "title": "Déclarations d'activité suspecte",
+        "desc": "Cadres pratiques pour rédiger des déclarations plus claires et plus utiles aux autorités."
+      }
+    }
   },
   "footer": {
     "copy": "© {year} Francesco Coniglione. Tous droits réservés."
   },
-  "about": {
-    "paragraph1": "Je suis un scientifique de données et un apprenant à vie avec un parcours qui touche à la santé, à l'éducation et à la finance. Ayant travaillé comme banquier et assistant technique en pharmacie, j'apporte une perspective unique aux données : je ne vois pas seulement des chiffres, je vois les personnes et les besoins d'affaires derrière eux.",
-    "paragraph2": "Grâce à une base solide dans le processus de développement logiciel, je me concentre sur l'écart entre la théorie technique et l'application pratique. Je me spécialise dans la création de code propre et évolutif ainsi que dans le développement de modèles d'apprentissage automatique qui résolvent des problèmes concrets et stimulent la croissance."
-  },
-  "projects": {
-    "ai-web-agent": { "description": "Un agent d'IA alimenté par l'API Google Gemini qui remplit les formulaires web à des fins de test grâce à une boucle agentique fonctionnelle." },
-    "debt-approval-cli": { "description": "Un outil en ligne de commande qui fournit des estimations d'approbation de dette à l'aide d'un modèle entraîné sur les données de LendingClub." },
-    "finley": { "description": "Votre allié financier qui utilise l'analyse prédictive pour offrir des aperçus personnalisés de votre valeur nette." },
-    "ceasar": { "description": "Un système CRM optimisé pour les interactions clients axées sur les données et une gestion simplifiée des flux de travail." },
-    "finrisk": { "description": "Un modèle d'apprentissage automatique prédictif conçu pour identifier les risques de faillite d'entreprise avec une précision d'environ 85 %." },
-    "musomania": { "description": "Une plateforme sociale pour musiciens, dotée d'un backend évolutif pour soutenir la collaboration et la monétisation." }
-  },
-  "skills": {
-    "languages": "Langages",
-    "dataScience": "Science des données",
-    "engineering": "Ingénierie",
-    "tools": "Outils"
-  },
   "nav": {
     "home": "Accueil",
-    "projects": "Projets",
+    "projects": "Écrits",
     "about": "À propos",
     "contact": "Contact"
   },
