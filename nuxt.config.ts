@@ -9,7 +9,7 @@ export default defineNuxtConfig({
         { name: 'description', content: 'Author website of Francesco Coniglione, focused on enterprise security, human behaviour, and insider risk.' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'author', content: 'Francesco Coniglione' },
-        { name: 'keywords', content: 'Francesco Coniglione, AML, anti-money laundering, financial crime, sanctions, compliance, investigations, author' },
+        { name: 'keywords', content: 'Francesco Coniglione, enterprise security, human behaviour, insider risk, investigations, author' },
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico', sizes: '192x192' },
