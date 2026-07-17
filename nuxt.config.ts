@@ -12,7 +12,7 @@ export default defineNuxtConfig({
         { name: 'keywords', content: 'Francesco Coniglione, AML, anti-money laundering, financial crime, sanctions, compliance, investigations, author' },
       ],
       link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico', sizes: 'any' },
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico', sizes: '192x192' },
       ],
     }
   },
