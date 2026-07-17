@@ -2,8 +2,8 @@
 import { Button } from '@/components/ui/button'
 import { Icon } from '@iconify/vue'
 
-const expertise = ['investigations', 'risk', 'regulation', 'humanBehaviour'] as const
-const topics = ['tradeBased', 'crypto', 'suspiciousActivity'] as const
+const expertise = ['insiderThreats', 'programGovernance', 'technicalControls', 'humanBehaviour'] as const;
+const topics = ['dataExfiltration', 'privilegedAccess', 'investigativeFrameworks'] as const;
 
 const socials = [
   { icon: 'mdi:linkedin', url: 'https://linkedin.com/in/francescoconiglione', labelKey: 'linkedin' },

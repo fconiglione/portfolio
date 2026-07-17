@@ -1,57 +1,57 @@
 {
   "landing": {
     "kicker": "Auteur et Technologue",
-    "heroTitle": "Écriture au croisement de la LBA, de la criminalité financière et de l'exécution réglementaire.",
-    "heroBody": "J'écris des analyses pratiques et documentées sur la lutte contre le blanchiment, la surveillance des transactions, le risque de sanctions et les typologies de criminalité financière.",
+    "heroTitle": "Écriture au croisement de la sécurité d'entreprise, du comportement humain et du risque interne.",
+    "heroBody": "J'écris des analyses pratiques et documentées sur les menaces internes, la protection des données et la gestion des risques d'entreprise pour les professionnels qui recherchent la clarté face au bruit.",
     "ctaPrimary": "Me contacter",
     "ctaSecondary": "Voir les axes d'écriture",
     "sidebarTitle": "Domaines clés",
     "writingTitle": "Axes d'écriture actuels",
-    "writingBody": "Mon travail transforme des exigences réglementaires complexes en orientations concrètes pour les équipes conformité, enquêtes et gestion du risque.",
-    "comingSoonLabel": "Livre à paraître",
-    "comingSoonBody": "Je travaille actuellement sur mon premier livre en LBA/criminalité financière. Cette section présente les thèmes et cadres qu'il abordera.",
+    "writingBody": "Mon travail transforme des indicateurs comportementaux complexes et des vulnérabilités techniques en orientations concrètes pour les équipes de sécurité, les enquêteurs et les responsables des risques.",
+    "comingSoonLabel": "Prochain livre à paraître",
+    "comingSoonBody": "Après mon premier roman, The Definition of Normal, je travaille actuellement sur un ouvrage non-fictionnel consacré au risque interne. Cette section présente les thèmes et cadres qu'il abordera.",
     "aboutTitle": "À propos de Francesco",
-    "aboutBody1": "Je suis un auteur et technologue basé à Barrie, Ontario. Spécialisé en criminalité financière, j'utilise mon expérience en informatique et mes études en gestion de la technologie pour comprendre les vulnérabilités des architectures numériques et du comportement humain.",
-    "aboutBody2": "J'explore comment réduire les faux positifs, améliorer la qualité des enquêtes et bâtir des dispositifs de conformité robustes et efficaces.",
+    "aboutBody1": "Je suis un auteur et technologue basé à Barrie, Ontario. Spécialisé dans le risque interne, j'utilise mon expérience en informatique et mes études supérieures en gestion de la technologie pour comprendre les vulnérabilités des architectures numériques et du comportement humain.",
+    "aboutBody2": "À travers mon travail, j'explore comment les institutions peuvent détecter les activités anormales, améliorer la qualité des enquêtes et bâtir des programmes de gestion du risque interne qui soient à la fois défendables et efficaces.",
     "contactTitle": "Collaborons",
-    "contactBody": "Si vous développez du contenu éditorial, de formation ou de leadership d'opinion en LBA et criminalité financière, je suis ouvert aux collaborations, contributions invitées et conférences.",
+    "contactBody": "Si vous développez du contenu de formation, de leadership d'opinion ou éditorial sur le risque interne et la sécurité d'entreprise, je suis ouvert aux collaborations, aux contributions invitées et aux conférences.",
     "socialLabels": {
       "linkedin": "LinkedIn",
       "email": "Courriel"
     },
     "expertise": {
-      "investigations": {
-        "label": "Enquêtes",
-        "desc": "Construction des dossiers, qualité narrative et standards de reporting fondés sur les preuves."
+      "insiderThreats": {
+        "label": "Détection des menaces internes",
+        "desc": "Identifier les changements de comportement, l'exfiltration de données et les schémas d'accès anormaux avant qu'ils ne s'aggravent."
       },
-      "risk": {
-        "label": "Risque et contrôles",
-        "desc": "Surveillance transactionnelle, contrôles de sanctions et gouvernance des modèles vus par un praticien."
+      "programGovernance": {
+        "label": "Gouvernance de programme",
+        "desc": "Bâtir des programmes interfonctionnels de risque interne qui équilibrent la vie privée des employés, la culture d'entreprise et la sécurité."
       },
-      "regulation": {
-        "label": "Signaux réglementaires",
-        "desc": "Traduire lignes directrices et actions d'application en pistes concrètes."
+      "technicalControls": {
+        "label": "Contrôles techniques",
+        "desc": "Traduire les architectures de sécurité complexes et la gestion des accès en cadres de risque exploitables."
       },
       "humanBehaviour": {
         "label": "Comportement humain",
-        "desc": "Analyser les comportements, les biais décisionnels et les dynamiques d'ingénierie sociale liées à la criminalité financière."
+        "desc": "Analyser la psychologie, les pressions et les biais décisionnels qui motivent les actions internes malveillantes ou négligentes."
       }
     },
     "topics": {
-      "tradeBased": {
+      "dataExfiltration": {
         "tag": "Dossier",
-        "title": "Blanchiment fondé sur le commerce",
-        "desc": "Schémas, signaux d'alerte et limites de données essentiels pour une détection opérationnelle."
+        "title": "Exfiltration de données et départs",
+        "desc": "Schémas, signaux d'alerte et limites de données essentiels lors de la surveillance des employés sur le départ."
       },
-      "crypto": {
+      "privilegedAccess": {
         "tag": "Brief",
-        "title": "Crypto et flux illicites hybrides",
-        "desc": "Comment les actifs numériques se combinent aux canaux traditionnels et ce que cela implique pour les contrôles."
+        "title": "Abus d'accès privilégiés",
+        "desc": "Comment les utilisateurs de confiance interagissent avec les systèmes sensibles et ce que cela implique pour les contrôles proactifs."
       },
-      "suspiciousActivity": {
+      "investigativeFrameworks": {
         "tag": "Guide",
-        "title": "Déclarations d'activité suspecte",
-        "desc": "Cadres pratiques pour rédiger des déclarations plus claires et plus utiles aux autorités."
+        "title": "Cadres d'enquête",
+        "desc": "Méthodologies pratiques pour enquêter sur les incidents internes tout en respectant les standards de la preuve."
       }
     }
   },

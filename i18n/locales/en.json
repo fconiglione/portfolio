@@ -1,57 +1,57 @@
 {
   "landing": {
     "kicker": "Author and Technologist",
-    "heroTitle": "Writing at the intersection of AML, financial crime, and policy execution.",
-    "heroBody": "I write practical, research-backed analysis on anti-money laundering, transaction monitoring, sanctions risk, and financial crime typologies for professionals who need clarity over noise.",
+    "heroTitle": "Writing at the intersection of enterprise security, human behaviour, and insider risk.",
+    "heroBody": "I write practical, research-backed analysis on insider threats, data protection, and enterprise risk management for professionals who need clarity over noise.",
     "ctaPrimary": "Get in touch",
     "ctaSecondary": "View writing focus",
     "sidebarTitle": "Core Areas",
     "writingTitle": "Current Writing Focus",
-    "writingBody": "My work translates complex regulation and operational pain points into concise, usable guidance for compliance teams, investigators, and risk leaders.",
-    "comingSoonLabel": "Book Coming Soon",
-    "comingSoonBody": "I am currently developing my first AML/financial crime book. This section previews the themes and frameworks it will cover.",
+    "writingBody": "My work translates complex human behavioural indicators and technical vulnerabilities into concise, usable guidance for security teams, investigators, and risk leaders.",
+    "comingSoonLabel": "Next Book Coming Soon",
+    "comingSoonBody": "Following my debut novel, The Definition of Normal, I am currently developing a non-fiction book focused on insider risk. This section previews the themes and frameworks it will cover.",
     "aboutTitle": "About Francesco",
-    "aboutBody1": "I am an author and technologist based in Barrie, Ontario. Specializing in financial crime, I use my background in computer science and graduate studies in technology management to understand the vulnerabilities in both digital architectures and human behaviour.",
-    "aboutBody2": "Across my work, I explore how institutions can reduce false positives, improve investigative quality, and build compliance programs that are both defensible and efficient.",
+    "aboutBody1": "I am an author and technologist based in Barrie, Ontario. Specializing in insider risk, I use my background in computer science and graduate studies in technology management to understand the vulnerabilities in both digital architectures and human behaviour.",
+    "aboutBody2": "Across my work, I explore how institutions can detect anomalous activity, improve investigative quality, and build insider risk programs that are both defensible and efficient.",
     "contactTitle": "Let's collaborate",
-    "contactBody": "If you're building training, thought leadership, or publication content in AML and financial crime, I am open to collaborations, guest writing, and speaking opportunities.",
+    "contactBody": "If you're building training, thought leadership, or publication content in insider risk and enterprise security, I am open to collaborations, guest writing, and speaking opportunities.",
     "socialLabels": {
       "linkedin": "LinkedIn",
       "email": "Email"
     },
     "expertise": {
-      "investigations": {
-        "label": "Investigations",
-        "desc": "Case development, narrative quality, and evidence-based reporting standards."
+      "insiderThreats": {
+        "label": "Insider Threat Detection",
+        "desc": "Identifying behavioural shifts, data exfiltration, and anomalous access patterns before they escalate."
       },
-      "risk": {
-        "label": "Risk and Controls",
-        "desc": "Transaction monitoring, sanctions controls, and model governance through a practitioner lens."
+      "programGovernance": {
+        "label": "Program Governance",
+        "desc": "Building cross-functional insider risk programs that balance employee privacy, corporate culture, and security."
       },
-      "regulation": {
-        "label": "Regulatory Signals",
-        "desc": "Distilling guidance, enforcement actions, and emerging expectations into actionable insight."
+      "technicalControls": {
+        "label": "Technical Controls",
+        "desc": "Translating complex security architectures and access management into actionable risk frameworks."
       },
       "humanBehaviour": {
         "label": "Human Behaviour",
-        "desc": "Examining behavioural patterns, decision-making bias, and social engineering dynamics linked to financial crime." 
+        "desc": "Examining the psychology, pressures, and decision-making bias that drive malicious or negligent insider actions."
       }
     },
     "topics": {
-      "tradeBased": {
+      "dataExfiltration": {
         "tag": "Feature",
-        "title": "Trade-Based Money Laundering",
-        "desc": "Patterns, red flags, and data constraints that matter when moving from theory to real detection workflows."
+        "title": "Data Exfiltration & Offboarding",
+        "desc": "Patterns, red flags, and data constraints that matter when monitoring departing employees."
       },
-      "crypto": {
+      "privilegedAccess": {
         "tag": "Briefing",
-        "title": "Crypto and Hybrid Illicit Flows",
-        "desc": "How digital assets intersect with legacy laundering channels and what that means for controls."
+        "title": "Privileged Access Abuse",
+        "desc": "How trusted users interact with sensitive systems and what that means for proactive controls."
       },
-      "suspiciousActivity": {
+      "investigativeFrameworks": {
         "tag": "Guide",
-        "title": "Suspicious Activity Reporting",
-        "desc": "Practical frameworks for writing clearer reports that improve law-enforcement utility."
+        "title": "Investigative Frameworks",
+        "desc": "Practical methodologies for investigating insider incidents while maintaining evidentiary standards."
       }
     }
   },
